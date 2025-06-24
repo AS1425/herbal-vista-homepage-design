@@ -1,5 +1,5 @@
 
-import { Beaker, Hand, Factory, Microscope, Puzzle } from "lucide-react";
+import { Beaker, Hand, Factory, Microscope, Puzzle, Award } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 const WhyChooseUs = () => {
@@ -48,6 +48,11 @@ const WhyChooseUs = () => {
       icon: Puzzle,
       title: "Custom Formulations",
       description: "Tailored extract formulations and packaging solutions to fit your brand's needs."
+    },
+    {
+      icon: Award,
+      title: "Quality Excellence",
+      description: "WHO-GMP certified facility ensuring international quality standards in every batch."
     }
   ];
 
@@ -68,7 +73,7 @@ const WhyChooseUs = () => {
           </h2>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {features.map((feature, index) => (
             <div 
               key={index}

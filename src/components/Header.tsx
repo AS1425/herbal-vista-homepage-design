@@ -42,10 +42,16 @@ const Header = () => {
         
         <nav className="hidden md:flex items-center space-x-8">
           <button 
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="text-white hover:text-[#26C164] transition-colors font-medium"
+          >
+            Home
+          </button>
+          <button 
             onClick={() => scrollToSection("who-we-are")}
             className="text-white hover:text-[#26C164] transition-colors font-medium"
           >
-            About
+            About Us
           </button>
           <button 
             onClick={() => scrollToSection("products")}
@@ -54,22 +60,16 @@ const Header = () => {
             Products
           </button>
           <button 
-            onClick={() => scrollToSection("why-choose-us")}
+            onClick={() => scrollToSection("career")}
             className="text-white hover:text-[#26C164] transition-colors font-medium"
           >
-            Infrastructure
-          </button>
-          <button 
-            onClick={() => scrollToSection("certifications")}
-            className="text-white hover:text-[#26C164] transition-colors font-medium"
-          >
-            Certifications
+            Career
           </button>
           <button 
             onClick={() => scrollToSection("contact")}
             className="text-white hover:text-[#26C164] transition-colors font-medium"
           >
-            Contact
+            Contact Us
           </button>
         </nav>
 

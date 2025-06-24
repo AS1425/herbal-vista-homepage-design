@@ -58,7 +58,7 @@ const ProductGrid = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
           {products.map((product, index) => (
             <div 
               key={index}
@@ -80,18 +80,20 @@ const ProductGrid = () => {
                 <h3 className="text-xl font-bold text-[#126D39] mb-3">
                   {product.name}
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600">
                   {product.description}
                 </p>
-                <Button 
-                  variant="outline" 
-                  className="border-[#26C164] text-[#26C164] hover:bg-[#26C164] hover:text-white transition-colors group-hover:bg-[#B85E0E] group-hover:border-[#B85E0E] group-hover:text-white"
-                >
-                  Explore More
-                </Button>
               </div>
             </div>
           ))}
+        </div>
+        
+        <div className="text-center">
+          <Button 
+            className="bg-[#B85E0E] hover:bg-[#A0520C] text-white px-8 py-3 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg"
+          >
+            Explore More Products
+          </Button>
         </div>
       </div>
     </section>

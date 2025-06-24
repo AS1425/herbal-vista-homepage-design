@@ -1,6 +1,4 @@
 
-import { Download } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { useEffect, useRef, useState } from "react";
 
 const Certifications = () => {
@@ -47,7 +45,7 @@ const Certifications = () => {
         
         <div className="max-w-4xl mx-auto">
           <div 
-            className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12 ${
+            className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 ${
               isVisible ? "animate-fade-in" : "opacity-0"
             }`}
           >
@@ -63,13 +61,6 @@ const Certifications = () => {
                 <p className="text-sm font-medium text-[#126D39]">{cert}</p>
               </div>
             ))}
-          </div>
-          
-          <div className="text-center">
-            <Button className="bg-[#B85E0E] hover:bg-[#A0520C] text-white px-8 py-3 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg">
-              <Download className="w-5 h-5 mr-2" />
-              Download Certification Pack
-            </Button>
           </div>
         </div>
       </div>

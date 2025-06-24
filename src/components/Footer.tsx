@@ -16,8 +16,8 @@ const Footer = () => {
     
     setIsSubscribed(true);
     toast({
-      title: "Subscribed successfully!",
-      description: "Thank you for subscribing to our newsletter.",
+      title: "Successfully joined!",
+      description: "Thank you for joining our updates.",
     });
     
     setTimeout(() => {
@@ -81,10 +81,10 @@ const Footer = () => {
               </li>
               <li>
                 <button 
-                  onClick={() => scrollToSection("certifications")}
+                  onClick={() => scrollToSection("career")}
                   className="text-[#FFF8EC] hover:text-[#26C164] transition-colors text-sm"
                 >
-                  Certifications
+                  Career
                 </button>
               </li>
               <li>
@@ -92,7 +92,7 @@ const Footer = () => {
                   onClick={() => scrollToSection("contact")}
                   className="text-[#FFF8EC] hover:text-[#26C164] transition-colors text-sm"
                 >
-                  Contact
+                  Contact Us
                 </button>
               </li>
             </ul>
@@ -105,7 +105,9 @@ const Footer = () => {
               <div className="flex items-start space-x-2">
                 <MapPin className="w-4 h-4 text-[#FFF8EC] mt-1 flex-shrink-0" />
                 <p className="text-[#FFF8EC] text-sm">
-                  Gujarat, India
+                  Vill. Chakarpur, Block Bazpur<br />
+                  Distt: Udham Singh Nagar<br />
+                  State: Uttarakhand
                 </p>
               </div>
               <div className="flex items-center space-x-2">
@@ -122,9 +124,9 @@ const Footer = () => {
             </div>
           </div>
           
-          {/* Connect & Subscribe */}
+          {/* Connect & Join Updates */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-[#26C164]">Connect & Subscribe</h3>
+            <h3 className="text-lg font-semibold mb-4 text-[#26C164]">Connect & Join Our Updates</h3>
             
             <div className="flex space-x-3 mb-6">
               <a href="#" className="w-8 h-8 bg-[#FFF8EC] bg-opacity-20 rounded-full flex items-center justify-center hover:bg-[#B85E0E] transition-colors">
@@ -140,7 +142,7 @@ const Footer = () => {
             
             {!isSubscribed ? (
               <form onSubmit={handleSubscribe} className="space-y-3">
-                <p className="text-[#FFF8EC] text-sm">Subscribe for Updates</p>
+                <p className="text-[#FFF8EC] text-sm">Join Our Updates</p>
                 <div className="flex">
                   <Input
                     type="email"
@@ -163,7 +165,7 @@ const Footer = () => {
                 <div className="w-5 h-5 rounded-full bg-[#26C164] flex items-center justify-center">
                   <span className="text-white text-xs">✓</span>
                 </div>
-                <span className="text-sm">Subscribed</span>
+                <span className="text-sm">Joined Successfully</span>
               </div>
             )}
           </div>
