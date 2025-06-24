@@ -1,5 +1,5 @@
 
-import { Flask, Hand, Factory, Microscope, Puzzle } from "lucide-react";
+import { Beaker, Hand, Factory, Microscope, Puzzle } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 const WhyChooseUs = () => {
@@ -25,7 +25,7 @@ const WhyChooseUs = () => {
 
   const features = [
     {
-      icon: Flask,
+      icon: Beaker,
       title: "In-House R&D Lab",
       description: "Innovation backed by science with continuous product development."
     },
