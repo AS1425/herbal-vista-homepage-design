@@ -51,8 +51,8 @@ const InquiryForm = () => {
 
   const usps = [
     { icon: CheckCircle, text: "Free Sample Testing", description: "Try our extracts with complimentary samples." },
-    { icon: Users, text: "Technical Support", description: "Expert guidance and documentation provided." },
     { icon: Zap, text: "Custom Formulations", description: "Products tailored to your requirements." },
+    { icon: Users, text: "Technical Support", description: "Expert guidance and documentation provided." },
     { icon: DollarSign, text: "Competitive Pricing", description: "Get the best value for quality." }
   ];
 
@@ -61,7 +61,7 @@ const InquiryForm = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">
-            Ready to Get Started?
+            Request Samples or a Custom Quote
           </h2>
           <p className="text-lg text-[#FFF8EC] max-w-2xl mx-auto">
             Ready to experience the Tirupati Herbal difference? Reach out for samples, 
@@ -86,7 +86,10 @@ const InquiryForm = () => {
                 
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-[#FFF8EC]" />
-                  <p className="text-white">info@tirupatiherbal.com</p>
+                  <div>
+                    <p className="text-white">info@tirupatiherbal.com</p>
+                    <p className="text-[#FFF8EC]">kunal.goel@tirupatiherbal.com</p>
+                  </div>
                 </div>
               </div>
               
@@ -157,7 +160,7 @@ const InquiryForm = () => {
                 
                 <Button 
                   type="submit"
-                  className="w-full bg-white text-[#126D39] hover:bg-gray-100 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg"
+                  className="w-full bg-[#26C164] text-white hover:bg-[#1F9B57] py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg"
                 >
                   <Send className="w-5 h-5 mr-2" />
                   Submit Inquiry

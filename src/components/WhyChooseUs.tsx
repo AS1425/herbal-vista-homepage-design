@@ -1,5 +1,5 @@
 
-import { Beaker, Hand, Factory, Microscope, Puzzle, Award } from "lucide-react";
+import { Beaker, Hand, Factory, Microscope, Puzzle, Truck } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 const WhyChooseUs = () => {
@@ -31,7 +31,7 @@ const WhyChooseUs = () => {
     },
     {
       icon: Hand,
-      title: "Ethical Sourcing",
+      title: "Ethical Botanical Sourcing",
       description: "Ingredients sourced from certified farms for sustainability and authenticity."
     },
     {
@@ -46,13 +46,13 @@ const WhyChooseUs = () => {
     },
     {
       icon: Puzzle,
-      title: "Custom Formulations",
+      title: "Custom Formulations & Packaging",
       description: "Tailored extract formulations and packaging solutions to fit your brand's needs."
     },
     {
-      icon: Award,
-      title: "Quality Excellence",
-      description: "WHO-GMP certified facility ensuring international quality standards in every batch."
+      icon: Truck,
+      title: "On-Time Global Delivery",
+      description: "Reliable worldwide shipping with tracking and timely delivery to your location."
     }
   ];
 

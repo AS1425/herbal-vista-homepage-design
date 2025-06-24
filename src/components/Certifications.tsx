@@ -25,21 +25,21 @@ const Certifications = () => {
   const certifications = [
     "WHO-GMP",
     "ISO 9001:2015",
-    "HALAL Certified",
-    "USDA Organic",
     "HACCP",
-    "FSSAI"
+    "FSSAI",
+    "USDA Organic",
+    "HALAL Certified"
   ];
 
   return (
     <section id="certifications" ref={sectionRef} className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-[#26C164] mb-4">
-            Certifications & Quality Assurance
+          <h2 className="text-4xl font-bold text-[#126D39] mb-4">
+            Globally Recognized Standards
           </h2>
           <p className="text-lg text-gray-600 mb-8">
-            Our commitment to quality is backed by internationally recognized certifications and standards:
+            Our commitment to quality is backed by internationally recognized certifications:
           </p>
         </div>
         

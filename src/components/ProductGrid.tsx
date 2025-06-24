@@ -26,22 +26,22 @@ const ProductGrid = () => {
   const products = [
     {
       name: "Amla Extract",
-      description: "Rich in Vitamin C – boosts immunity and wellness.",
+      description: "Promotes immunity and skin health",
       image: "/lovable-uploads/29afdef2-019e-4a7c-9d4b-c33f4fb28efc.png"
     },
     {
       name: "Aloe Vera Extract",
-      description: "Soothing and healing – ideal for skin health and digestion.",
+      description: "Soothes and hydrates skin",
       image: "/lovable-uploads/036983db-6cf0-48c1-9e8a-24fd64f6a037.png"
     },
     {
       name: "Akarkara Extract",
-      description: "Potent and invigorating – known for its therapeutic alkaloids.",
+      description: "Supports vitality and cognition",
       image: "/lovable-uploads/b75c7ca3-f8fd-423d-abab-58fcafaf46af.png"
     },
     {
       name: "Ashwagandha Extract",
-      description: "Adaptogenic herb – supports stress relief and energy balance.",
+      description: "Reduces stress, boosts energy",
       image: "/lovable-uploads/5adb452a-1ad6-41e8-bf82-a7c69800fcc1.png"
     }
   ];
@@ -50,11 +50,12 @@ const ProductGrid = () => {
     <section id="products" ref={sectionRef} className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-[#26C164] mb-4">
-            Our Extract Solutions
+          <h2 className="text-4xl font-bold text-[#126D39] mb-4">
+            What We Offer
           </h2>
-          <p className="text-lg text-gray-600">
-            Explore our range of botanical extracts
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Standardized extracts for diverse applications – From wellness to pharmaceuticals, 
+            we have a solution to meet your specific needs.
           </p>
         </div>
         
@@ -90,7 +91,7 @@ const ProductGrid = () => {
         
         <div className="text-center">
           <Button 
-            className="bg-[#B85E0E] hover:bg-[#A0520C] text-white px-8 py-3 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg"
+            className="bg-[#26C164] hover:bg-[#1F9B57] text-white px-8 py-3 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg"
           >
             Explore More Products
           </Button>

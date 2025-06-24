@@ -17,7 +17,7 @@ const Footer = () => {
     setIsSubscribed(true);
     toast({
       title: "Successfully joined!",
-      description: "Thank you for joining our updates.",
+      description: "Thank you for staying connected with us.",
     });
     
     setTimeout(() => {
@@ -119,14 +119,17 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-[#FFF8EC]" />
-                <p className="text-[#FFF8EC] text-sm">info@tirupatiherbal.com</p>
+                <div>
+                  <p className="text-[#FFF8EC] text-sm">info@tirupatiherbal.com</p>
+                  <p className="text-[#FFF8EC] text-sm">kunal.goel@tirupatiherbal.com</p>
+                </div>
               </div>
             </div>
           </div>
           
-          {/* Connect & Join Updates */}
+          {/* Connect & Stay Connected */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-[#26C164]">Connect & Join Our Updates</h3>
+            <h3 className="text-lg font-semibold mb-4 text-[#26C164]">Stay Connected</h3>
             
             <div className="flex space-x-3 mb-6">
               <a href="#" className="w-8 h-8 bg-[#FFF8EC] bg-opacity-20 rounded-full flex items-center justify-center hover:bg-[#B85E0E] transition-colors">
@@ -142,11 +145,11 @@ const Footer = () => {
             
             {!isSubscribed ? (
               <form onSubmit={handleSubscribe} className="space-y-3">
-                <p className="text-[#FFF8EC] text-sm">Join Our Updates</p>
+                <p className="text-[#FFF8EC] text-sm">Stay Connected</p>
                 <div className="flex">
                   <Input
                     type="email"
-                    placeholder="Your email"
+                    placeholder="Your Email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="bg-white bg-opacity-20 border-white border-opacity-30 text-white placeholder-gray-300 text-sm rounded-r-none"
@@ -156,7 +159,7 @@ const Footer = () => {
                     type="submit"
                     className="bg-[#B85E0E] hover:bg-[#A0520C] px-3 rounded-l-none"
                   >
-                    ✓
+                    →
                   </Button>
                 </div>
               </form>
@@ -165,7 +168,7 @@ const Footer = () => {
                 <div className="w-5 h-5 rounded-full bg-[#26C164] flex items-center justify-center">
                   <span className="text-white text-xs">✓</span>
                 </div>
-                <span className="text-sm">Joined Successfully</span>
+                <span className="text-sm">Connected Successfully</span>
               </div>
             )}
           </div>
