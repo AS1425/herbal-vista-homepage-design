@@ -1,0 +1,101 @@
+
+import { Button } from "@/components/ui/button";
+import { useEffect, useRef, useState } from "react";
+
+const ProductGrid = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const products = [
+    {
+      name: "Amla Extract",
+      description: "Rich in Vitamin C – boosts immunity and wellness.",
+      image: "/lovable-uploads/29afdef2-019e-4a7c-9d4b-c33f4fb28efc.png"
+    },
+    {
+      name: "Aloe Vera Extract",
+      description: "Soothing and healing – ideal for skin health and digestion.",
+      image: "/lovable-uploads/036983db-6cf0-48c1-9e8a-24fd64f6a037.png"
+    },
+    {
+      name: "Akarkara Extract",
+      description: "Potent and invigorating – known for its therapeutic alkaloids.",
+      image: "/lovable-uploads/b75c7ca3-f8fd-423d-abab-58fcafaf46af.png"
+    },
+    {
+      name: "Ashwagandha Extract",
+      description: "Adaptogenic herb – supports stress relief and energy balance.",
+      image: "/lovable-uploads/5adb452a-1ad6-41e8-bf82-a7c69800fcc1.png"
+    }
+  ];
+
+  return (
+    <section id="products" ref={sectionRef} className="py-20 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-[#26C164] mb-4">
+            Our Extract Solutions
+          </h2>
+          <p className="text-lg text-gray-600">
+            Explore our range of botanical extracts
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {products.map((product, index) => (
+            <div 
+              key={index}
+              className={`bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group ${
+                isVisible 
+                  ? "opacity-100 translate-y-0" 
+                  : "opacity-0 translate-y-8"
+              }`}
+              style={{ transitionDelay: `${index * 200}ms` }}
+            >
+              <div className="aspect-w-16 aspect-h-9 overflow-hidden">
+                <img 
+                  src={product.image} 
+                  alt={product.name}
+                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-[#126D39] mb-3">
+                  {product.name}
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  {product.description}
+                </p>
+                <Button 
+                  variant="outline" 
+                  className="border-[#26C164] text-[#26C164] hover:bg-[#26C164] hover:text-white transition-colors group-hover:bg-[#B85E0E] group-hover:border-[#B85E0E] group-hover:text-white"
+                >
+                  Explore More
+                </Button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ProductGrid;
