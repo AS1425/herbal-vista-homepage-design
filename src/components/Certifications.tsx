@@ -23,12 +23,30 @@ const Certifications = () => {
   }, []);
 
   const certifications = [
-    "WHO-GMP",
-    "ISO 9001:2015",
-    "HACCP",
-    "FSSAI",
-    "USDA Organic",
-    "HALAL Certified"
+    {
+      name: "WHO-GMP",
+      logo: "/lovable-uploads/26b5e005-7624-4314-a628-4ada653f0e0c.png"
+    },
+    {
+      name: "ISO 9001:2015",
+      logo: "/lovable-uploads/c49a6aaf-ac2a-4762-be19-67b570030e9b.png"
+    },
+    {
+      name: "HACCP",
+      logo: "/lovable-uploads/e2b8a2cb-92d2-49e2-9e4b-63576e10ea61.png"
+    },
+    {
+      name: "FSSAI",
+      logo: "/lovable-uploads/56c393dd-3edd-4f4f-b645-d1040ed8fa66.png"
+    },
+    {
+      name: "USDA Organic",
+      logo: "/lovable-uploads/6dac4e6c-4c7e-4a2f-a6ed-e6c6545d5d41.png"
+    },
+    {
+      name: "HALAL Certified",
+      logo: "/lovable-uploads/543128e5-82f9-4400-ae75-3f62696ef26e.png"
+    }
   ];
 
   return (
@@ -55,10 +73,14 @@ const Certifications = () => {
                 className="bg-gray-50 p-6 rounded-lg text-center hover:shadow-md transition-all duration-300 hover:-translate-y-1"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="w-16 h-16 bg-[#26C164] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <div className="w-8 h-8 bg-[#26C164] rounded"></div>
+                <div className="w-16 h-16 mx-auto mb-3 flex items-center justify-center">
+                  <img 
+                    src={cert.logo} 
+                    alt={cert.name}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
-                <p className="text-sm font-medium text-[#126D39]">{cert}</p>
+                <p className="text-sm font-medium text-[#126D39]">{cert.name}</p>
               </div>
             ))}
           </div>
