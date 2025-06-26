@@ -33,8 +33,8 @@ const WhoWeAre = () => {
           >
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Modern herbal manufacturing facility"
+                src="/lovable-uploads/d3d1d20f-a80f-4f82-a706-a72cfe49cf76.png" 
+                alt="Herbal extract powder and senna pods on wooden surface"
                 className="w-full h-96 object-cover"
               />
             </div>
