@@ -1,9 +1,12 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,10 +18,28 @@ const Header = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
+  };
+
+  const navigateToAbout = () => {
+    navigate('/about');
+  };
+
+  const navigateHome = () => {
+    navigate('/');
   };
 
   return (
@@ -30,7 +51,7 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4 h-full flex items-center justify-between">
-        <div className="flex items-center">
+        <div className="flex items-center cursor-pointer" onClick={navigateHome}>
           <img 
             src="/lovable-uploads/64c539e1-444d-445b-a5a2-f0b62d619ae1.png" 
             alt="Tirupati Herbal Logo" 
@@ -42,13 +63,13 @@ const Header = () => {
         
         <nav className="hidden md:flex items-center space-x-8">
           <button 
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            onClick={navigateHome}
             className="text-white hover:text-[#26C164] transition-colors font-medium"
           >
             Home
           </button>
           <button 
-            onClick={() => scrollToSection("who-we-are")}
+            onClick={navigateToAbout}
             className="text-white hover:text-[#26C164] transition-colors font-medium"
           >
             About Us
