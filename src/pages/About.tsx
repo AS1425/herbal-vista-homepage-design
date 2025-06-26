@@ -1,11 +1,9 @@
 
 import Hero from "@/components/about/Hero";
 import WhoWeAre from "@/components/about/WhoWeAre";
-import ResearchDevelopment from "@/components/about/ResearchDevelopment";
-import QualityStandards from "@/components/about/QualityStandards";
-import WhyChooseUsFlow from "@/components/about/WhyChooseUsFlow";
-import MeetTheTeam from "@/components/about/MeetTheTeam";
-import GlobalPresence from "@/components/about/GlobalPresence";
+import QualityCommitment from "@/components/about/QualityCommitment";
+import LeadershipTeam from "@/components/about/LeadershipTeam";
+import OurFoundation from "@/components/about/OurFoundation";
 import FinalCTA from "@/components/about/FinalCTA";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -17,11 +15,9 @@ const About = () => {
       <Header />
       <Hero />
       <WhoWeAre />
-      <ResearchDevelopment />
-      <QualityStandards />
-      <WhyChooseUsFlow />
-      <MeetTheTeam />
-      <GlobalPresence />
+      <QualityCommitment />
+      <LeadershipTeam />
+      <OurFoundation />
       <FinalCTA />
       <Footer />
       <WhatsAppButton />

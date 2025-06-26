@@ -22,7 +22,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1576671081837-49000212a370?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')"
+          backgroundImage: "linear-gradient(rgba(18, 109, 57, 0.3), rgba(18, 109, 57, 0.3)), url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')"
         }}
       />
       
@@ -33,25 +33,25 @@ const Hero = () => {
           }`}
           style={{ color: '#26C164' }}
         >
-          Where Nature Meets Precision
+          Where Nature is Measured with Precision
         </h1>
         
         <p 
-          className={`text-xl md:text-2xl text-[#FFF8EC] mb-8 leading-relaxed transition-all duration-1000 delay-300 ${
+          className={`text-xl md:text-2xl text-white mb-8 leading-relaxed transition-all duration-1000 delay-300 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          Crafting scientifically validated herbal solutions for the world, one batch at a time.
+          For decades, we've combined traditional herbal wisdom with modern scientific methods to craft world-class Senna-based extracts.
         </p>
         
         <Button 
           onClick={scrollToNext}
-          className={`bg-[#26C164] hover:bg-[#1F9B57] text-white px-8 py-4 text-lg rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${
+          className={`bg-[#26C164] hover:bg-[#1F9B57] text-white px-8 py-4 text-lg rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:shadow-[#26C164]/30 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
           style={{ transitionDelay: "600ms" }}
         >
-          Explore Our Story
+          Explore Our Journey
         </Button>
       </div>
       
