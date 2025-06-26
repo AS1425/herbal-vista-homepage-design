@@ -1,7 +1,7 @@
 
 import Hero from "@/components/Hero";
 import Header from "@/components/Header";
-import WhoWeAre from "@/components/WhoWeAre";
+import AboutTirupatiHerbal from "@/components/AboutTirupatiHerbal";
 import ProductGrid from "@/components/ProductGrid";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Certifications from "@/components/Certifications";
@@ -15,7 +15,7 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Header />
       <Hero />
-      <WhoWeAre />
+      <AboutTirupatiHerbal />
       <ProductGrid />
       <WhyChooseUs />
       <Certifications />

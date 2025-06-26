@@ -23,7 +23,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "linear-gradient(135deg, rgba(18, 109, 57, 0.7) 0%, rgba(38, 193, 100, 0.5) 100%), url('https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"
+          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"
         }}
       />
       
@@ -35,13 +35,19 @@ const Hero = () => {
           }`}
           style={{ color: '#26C164' }}
         >
-          Pure Botanical Extracts –{" "}
-          <span className="text-white">Backed by Nature</span>,{" "}
-          <span className="text-[#FFF8EC]">Perfected by Science</span>
+          Pure Botanical Extracts
         </h1>
         
+        <h2 
+          className={`text-2xl md:text-3xl font-semibold mb-6 text-white transition-all duration-1000 delay-200 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
+          Backed by Nature, Perfected by Science
+        </h2>
+        
         <p 
-          className={`text-xl md:text-2xl text-[#FFF8EC] mb-8 leading-relaxed transition-all duration-1000 delay-300 ${
+          className={`text-lg md:text-xl text-gray-200 mb-8 leading-relaxed transition-all duration-1000 delay-300 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
