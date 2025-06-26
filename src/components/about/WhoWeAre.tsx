@@ -35,12 +35,11 @@ const WhoWeAre = () => {
             }`}
           >
             <div 
-              className="w-full"
+              className="w-full h-[520px]"
               style={{ 
                 borderRadius: '16px',
                 boxShadow: '0 8px 24px rgba(0,0,0,0.1)',
-                overflow: 'hidden',
-                aspectRatio: '4/3'
+                overflow: 'hidden'
               }}
             >
               <img 
@@ -100,7 +99,10 @@ const WhoWeAre = () => {
               </h4>
             </div>
             <p className="text-gray-700 leading-relaxed">
-              We aim to maintain the quality of the product as we perform different stringent quality measures under the strict direction of our skilled professionals.
+              We aim to maintain the quality of every product by implementing rigorous, multi-level testing and inspection protocols throughout the manufacturing process. All raw materials undergo initial verification before entering production. During processing, we apply advanced quality checks aligned with GMP and ISO standards to ensure consistency, purity, and safety.
+            </p>
+            <p className="text-gray-700 leading-relaxed mt-4">
+              Our skilled quality control team uses calibrated instruments, scientific methodologies, and strict batch-wise documentation to uphold product integrity. This enables us to consistently deliver high-grade extracts that meet client specifications and global compliance norms.
             </p>
           </div>
 
