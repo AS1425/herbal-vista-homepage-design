@@ -27,32 +27,38 @@ const WhyChooseUs = () => {
     {
       icon: Beaker,
       title: "In-House R&D Lab",
-      description: "Innovation backed by science with continuous product development."
+      description: "Innovation backed by science with continuous product development.",
+      gradient: "from-[#26C164] to-[#B85E0E]"
     },
     {
       icon: Hand,
-      title: "Ethical Botanical Sourcing",
-      description: "Ingredients sourced from certified farms for sustainability and authenticity."
+      title: "Ethical Botanical Sourcing", 
+      description: "Ingredients sourced from certified farms for sustainability and authenticity.",
+      gradient: "from-[#B85E0E] to-[#26C164]"
     },
     {
       icon: Factory,
       title: "Scalable Production",
-      description: "Flexible production volumes, from small sample batches to large-scale orders."
+      description: "Flexible production volumes, from small sample batches to large-scale orders.",
+      gradient: "from-[#26C164] to-[#126D39]"
     },
     {
       icon: Microscope,
       title: "Lab-Tested Purity",
-      description: "Rigorous testing for each batch. Every extract comes with a COA and MSDS for quality assurance."
+      description: "Rigorous testing for each batch. Every extract comes with a COA and MSDS for quality assurance.",
+      gradient: "from-[#126D39] to-[#B85E0E]"
     },
     {
       icon: Puzzle,
       title: "Custom Formulations & Packaging",
-      description: "Tailored extract formulations and packaging solutions to fit your brand's needs."
+      description: "Tailored extract formulations and packaging solutions to fit your brand's needs.",
+      gradient: "from-[#B85E0E] to-[#26C164]"
     },
     {
       icon: Truck,
       title: "On-Time Global Delivery",
-      description: "Reliable worldwide shipping with tracking and timely delivery to your location."
+      description: "Reliable worldwide shipping with tracking and timely delivery to your location.",
+      gradient: "from-[#26C164] to-[#B85E0E]"
     }
   ];
 
@@ -84,8 +90,8 @@ const WhyChooseUs = () => {
               }`}
               style={{ transitionDelay: `${index * 150}ms` }}
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-[#26C164] bg-opacity-10 rounded-full mb-6 group-hover:bg-[#26C164] transition-colors">
-                <feature.icon className="w-8 h-8 text-[#26C164]" />
+              <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${feature.gradient} rounded-full mb-6 p-3`}>
+                <feature.icon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-[#126D39] mb-4">
                 {feature.title}

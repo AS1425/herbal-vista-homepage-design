@@ -33,15 +33,21 @@ const Hero = () => {
           className={`text-4xl md:text-6xl font-bold mb-6 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
-          style={{ color: '#B85E0E' }}
+          style={{ color: '#26C164' }}
         >
-          Pure Botanical Extracts –{" "}
-          <span className="text-white">Backed by Nature</span>,{" "}
-          <span className="text-[#FFF8EC]">Perfected by Science</span>
+          Pure Botanical Extracts
         </h1>
         
         <p 
-          className={`text-xl md:text-2xl text-[#FFF8EC] mb-8 leading-relaxed transition-all duration-1000 delay-300 ${
+          className={`text-xl md:text-2xl text-white mb-2 leading-relaxed transition-all duration-1000 delay-300 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
+          – Backed by Nature, Perfected by Science
+        </p>
+        
+        <p 
+          className={`text-lg md:text-xl text-white mb-8 leading-relaxed transition-all duration-1000 delay-500 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
@@ -54,7 +60,7 @@ const Hero = () => {
           className={`bg-[#26C164] hover:bg-[#1F9B57] text-white px-8 py-4 text-lg rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
-          style={{ transitionDelay: "600ms" }}
+          style={{ transitionDelay: "700ms" }}
         >
           Explore Extracts
         </Button>
