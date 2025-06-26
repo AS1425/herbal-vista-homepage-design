@@ -25,25 +25,27 @@ const WhoWeAre = () => {
   return (
     <section id="who-we-are" ref={sectionRef} className="py-20" style={{ backgroundColor: '#FFF8EC' }}>
       <div className="container mx-auto px-12">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-16 items-stretch">
           <div 
             className={`transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
             }`}
           >
-            <div className="rounded-2xl overflow-hidden shadow-2xl">
+            <div className="h-full flex items-center">
               <img 
-                src="/lovable-uploads/27f8cb2a-7a52-48e8-8ef3-b3bbc45d8734.png" 
-                alt="Modern herbal laboratory facility with advanced equipment"
-                className="w-full h-96 object-cover"
+                src="/lovable-uploads/0f939594-4bd5-47ba-893b-b2e6d73237aa.png" 
+                alt="Modern laboratory with test tubes and botanical extracts"
+                className="w-full h-full object-cover"
+                style={{ minHeight: '500px', maxHeight: '600px' }}
               />
             </div>
           </div>
           
           <div 
-            className={`transition-all duration-1000 delay-300 ${
+            className={`transition-all duration-1000 delay-300 flex flex-col justify-center ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
             }`}
+            style={{ padding: '40px 0' }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-[#126D39] mb-8">
               A Certified Leader in Botanical Extraction
@@ -72,7 +74,7 @@ const WhoWeAre = () => {
               </p>
               
               <p className="mt-6">
-                We at Tirupati Herbal are committed to provide natural, safe & pure products, making sure that we deliver as per client's requirements & needs. All our products are manufactured from the Selected quality Raw material. Moreover, we have modern technology, good manufacturing practices & stringent quality control of raw materials, processed & finished products, we ensure superior quality & product consistency.
+                We at Tirupati Herbal are committed to provide natural, safe & pure products, making sure that we deliver as per client's requirements & needs. All our products are manufactured from the Selected quality Raw material. Moreover, we have modern technology, good manufacturing practices & stringent quality control of raw materials, processed & finished products, we ensure superior quality & product consistency. At our manufacturing facility, Good manufacturing practices including safety, cleanliness, and hygiene are strictly followed.
               </p>
             </div>
           </div>
