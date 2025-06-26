@@ -38,6 +38,10 @@ const Header = () => {
     navigate('/about');
   };
 
+  const navigateToBotanicalExtracts = () => {
+    navigate('/botanical-extracts');
+  };
+
   const navigateHome = () => {
     navigate('/');
   };
@@ -75,7 +79,7 @@ const Header = () => {
             About Us
           </button>
           <button 
-            onClick={() => scrollToSection("products")}
+            onClick={navigateToBotanicalExtracts}
             className="text-white hover:text-[#26C164] transition-colors font-medium"
           >
             Products
