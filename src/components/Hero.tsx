@@ -33,7 +33,7 @@ const Hero = () => {
           className={`text-4xl md:text-6xl font-bold mb-6 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
-          style={{ color: '#26C164' }}
+          style={{ color: '#B85E0E' }}
         >
           Pure Botanical Extracts –{" "}
           <span className="text-white">Backed by Nature</span>,{" "}
