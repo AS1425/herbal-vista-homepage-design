@@ -33,7 +33,7 @@ const Hero = () => {
           }`}
           style={{ color: '#26C164' }}
         >
-          Where Nature is Measured with Precision
+          About Tirupati Herbal
         </h1>
         
         <p 
@@ -41,7 +41,7 @@ const Hero = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          For decades, we've combined traditional herbal wisdom with modern scientific methods to craft world-class Senna-based extracts.
+          Certified herbal manufacturer specializing in high-quality Senna-based extracts and botanical solutions.
         </p>
         
         <Button 
@@ -51,7 +51,7 @@ const Hero = () => {
           }`}
           style={{ transitionDelay: "600ms" }}
         >
-          Explore Our Journey
+          Explore Our Story
         </Button>
       </div>
       
