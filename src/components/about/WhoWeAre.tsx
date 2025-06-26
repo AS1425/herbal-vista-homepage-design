@@ -25,27 +25,37 @@ const WhoWeAre = () => {
   return (
     <section id="who-we-are" ref={sectionRef} className="py-20" style={{ backgroundColor: '#FFF8EC' }}>
       <div className="container mx-auto px-12">
-        <div className="grid md:grid-cols-2 gap-16 items-stretch">
+        <div className="grid md:grid-cols-2 gap-16 items-start">
           <div 
             className={`transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
             }`}
           >
-            <div className="h-full flex items-center">
+            <div className="image-container" style={{ 
+              minHeight: '520px',
+              maxHeight: '520px',
+              borderRadius: '8px',
+              boxShadow: '0 6px 20px rgba(0,0,0,0.1)',
+              overflow: 'hidden'
+            }}>
               <img 
                 src="/lovable-uploads/0f939594-4bd5-47ba-893b-b2e6d73237aa.png" 
                 alt="Modern laboratory with test tubes and botanical extracts"
-                className="w-full h-full object-cover"
-                style={{ minHeight: '500px', maxHeight: '600px' }}
+                style={{
+                  height: '100%',
+                  width: '100%',
+                  maxHeight: '520px',
+                  objectFit: 'cover',
+                  aspectRatio: '4/3'
+                }}
               />
             </div>
           </div>
           
           <div 
-            className={`transition-all duration-1000 delay-300 flex flex-col justify-center ${
+            className={`transition-all duration-1000 delay-300 ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
             }`}
-            style={{ padding: '40px 0' }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-[#126D39] mb-8">
               A Certified Leader in Botanical Extraction
