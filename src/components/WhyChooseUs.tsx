@@ -1,5 +1,6 @@
 
 import { Beaker, Hand, Factory, Microscope, Puzzle, Truck } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useEffect, useRef, useState } from "react";
 
 const WhyChooseUs = () => {
@@ -27,38 +28,32 @@ const WhyChooseUs = () => {
     {
       icon: Beaker,
       title: "In-House R&D Lab",
-      description: "Innovation backed by science with continuous product development.",
-      gradient: "from-[#26C164] to-[#B85E0E]"
+      description: "Innovation backed by science with continuous product development."
     },
     {
       icon: Hand,
-      title: "Ethical Botanical Sourcing", 
-      description: "Ingredients sourced from certified farms for sustainability and authenticity.",
-      gradient: "from-[#B85E0E] to-[#26C164]"
+      title: "Ethical Botanical Sourcing",
+      description: "Ingredients sourced from certified farms for sustainability and authenticity."
     },
     {
       icon: Factory,
       title: "Scalable Production",
-      description: "Flexible production volumes, from small sample batches to large-scale orders.",
-      gradient: "from-[#26C164] to-[#126D39]"
+      description: "Flexible production volumes, from small sample batches to large-scale orders."
     },
     {
       icon: Microscope,
       title: "Lab-Tested Purity",
-      description: "Rigorous testing for each batch. Every extract comes with a COA and MSDS for quality assurance.",
-      gradient: "from-[#126D39] to-[#B85E0E]"
+      description: "Rigorous testing for each batch. Every extract comes with a COA and MSDS for quality assurance."
     },
     {
       icon: Puzzle,
       title: "Custom Formulations & Packaging",
-      description: "Tailored extract formulations and packaging solutions to fit your brand's needs.",
-      gradient: "from-[#B85E0E] to-[#26C164]"
+      description: "Tailored extract formulations and packaging solutions to fit your brand's needs."
     },
     {
       icon: Truck,
       title: "On-Time Global Delivery",
-      description: "Reliable worldwide shipping with tracking and timely delivery to your location.",
-      gradient: "from-[#26C164] to-[#B85E0E]"
+      description: "Reliable worldwide shipping with tracking and timely delivery to your location."
     }
   ];
 
@@ -79,28 +74,41 @@ const WhyChooseUs = () => {
           </h2>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {features.map((feature, index) => (
-            <div 
-              key={index}
-              className={`bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center ${
-                isVisible 
-                  ? "opacity-100 translate-y-0" 
-                  : "opacity-0 translate-y-8"
-              }`}
-              style={{ transitionDelay: `${index * 150}ms` }}
-            >
-              <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${feature.gradient} rounded-full mb-6 p-3`}>
-                <feature.icon className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-[#126D39] mb-4">
-                {feature.title}
-              </h3>
-              <p className="text-gray-600">
-                {feature.description}
-              </p>
-            </div>
-          ))}
+        <div className="max-w-7xl mx-auto">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {features.map((feature, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <div 
+                    className={`bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center h-full ${
+                      isVisible 
+                        ? "opacity-100 translate-y-0" 
+                        : "opacity-0 translate-y-8"
+                    }`}
+                    style={{ transitionDelay: `${index * 150}ms` }}
+                  >
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-[#26C164] bg-opacity-10 rounded-full mb-6 group-hover:bg-[#26C164] transition-colors">
+                      <feature.icon className="w-8 h-8 text-[#26C164]" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-[#126D39] mb-4">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-600">
+                      {feature.description}
+                    </p>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-4" />
+            <CarouselNext className="right-4" />
+          </Carousel>
         </div>
       </div>
     </section>

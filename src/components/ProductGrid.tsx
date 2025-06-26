@@ -1,4 +1,5 @@
 
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef, useState } from "react";
 
@@ -59,34 +60,47 @@ const ProductGrid = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
-          {products.map((product, index) => (
-            <div 
-              key={index}
-              className={`bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group ${
-                isVisible 
-                  ? "opacity-100 translate-y-0" 
-                  : "opacity-0 translate-y-8"
-              }`}
-              style={{ transitionDelay: `${index * 200}ms` }}
-            >
-              <div className="aspect-w-16 aspect-h-9 overflow-hidden">
-                <img 
-                  src={product.image} 
-                  alt={product.name}
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-[#126D39] mb-3">
-                  {product.name}
-                </h3>
-                <p className="text-gray-600">
-                  {product.description}
-                </p>
-              </div>
-            </div>
-          ))}
+        <div className="max-w-6xl mx-auto mb-12">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {products.map((product, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <div 
+                    className={`bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group h-full ${
+                      isVisible 
+                        ? "opacity-100 translate-y-0" 
+                        : "opacity-0 translate-y-8"
+                    }`}
+                    style={{ transitionDelay: `${index * 200}ms` }}
+                  >
+                    <div className="aspect-w-16 aspect-h-9 overflow-hidden">
+                      <img 
+                        src={product.image} 
+                        alt={product.name}
+                        className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold text-[#126D39] mb-3">
+                        {product.name}
+                      </h3>
+                      <p className="text-gray-600">
+                        {product.description}
+                      </p>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-4" />
+            <CarouselNext className="right-4" />
+          </Carousel>
         </div>
         
         <div className="text-center">
