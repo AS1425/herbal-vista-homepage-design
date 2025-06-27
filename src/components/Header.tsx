@@ -1,4 +1,5 @@
 
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -54,7 +55,7 @@ const Header = () => {
           : "bg-[#F8F9F4] h-20"
       }`}
     >
-      <div className="container mx-auto px-6 h-full flex items-center justify-between max-w-7xl">
+      <div className="container mx-auto px-8 h-full flex items-center justify-between max-w-8xl">
         <div 
           className="flex items-center cursor-pointer transition-all duration-300 py-2 px-3"
           onClick={navigateHome}
@@ -62,10 +63,8 @@ const Header = () => {
           <img 
             src="/lovable-uploads/6516ad55-a994-4457-8472-e7432ce3c894.png" 
             alt="Tirupati Herbal Logo" 
-            className={`transition-all duration-300 ${
-              isScrolled ? "h-10 w-auto" : "h-16 w-auto"
-            }`}
-            style={{ maxWidth: isScrolled ? '180px' : '240px' }}
+            className="h-14 w-auto transition-all duration-300"
+            style={{ maxWidth: '220px' }}
           />
         </div>
         
@@ -114,3 +113,4 @@ const Header = () => {
 };
 
 export default Header;
+
