@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Leaf, Flask, Globe, Users } from "lucide-react";
+import { Leaf, Beaker, Globe, Users } from "lucide-react";
 
 const CoreValues = () => {
   const values = [
@@ -10,7 +10,7 @@ const CoreValues = () => {
       description: "We maintain strict standards for safety, ethics, and transparency."
     },
     {
-      icon: <Flask className="w-12 h-12 text-[#26C164]" />,
+      icon: <Beaker className="w-12 h-12 text-[#26C164]" />,
       title: "Innovation Through Nature",
       description: "We blend traditional wisdom with modern science."
     },
