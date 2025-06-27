@@ -3,12 +3,12 @@ import React from "react";
 
 const ContactHero = () => {
   return (
-    <section className="relative h-[60vh] min-h-[350px] flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden pt-24">
       {/* Background image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/lovable-uploads/d97efc36-ca54-4c39-b29d-0097ddea363c.png')"
+          backgroundImage: "url('/lovable-uploads/917a4954-64b0-484f-ab90-c6638e30460d.png')"
         }}
       />
       
