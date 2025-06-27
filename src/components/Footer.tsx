@@ -39,11 +39,13 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand Info */}
           <div className="space-y-4">
-            <img 
-              src="/lovable-uploads/0ac79ddb-56c3-484d-b808-ca2dc06ab6e8.png" 
-              alt="Tirupati Herbal Logo" 
-              className="h-12"
-            />
+            <div className="bg-[#FFF8EC] rounded-lg p-3 inline-block">
+              <img 
+                src="/lovable-uploads/1c568d1c-d65f-44ee-ae14-6b108ae300f7.png" 
+                alt="Tirupati Herbal Logo" 
+                className="h-12"
+              />
+            </div>
             <p className="text-[#FFF8EC] text-sm leading-relaxed">
               Tirupati Herbal – Delivering botanical excellence. We manufacture high-quality 
               herbal extracts for nutraceutical, pharma, and wellness industries worldwide, 

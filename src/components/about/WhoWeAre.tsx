@@ -76,10 +76,26 @@ const WhoWeAre = () => {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-3xl font-bold text-[#126D39] mb-4 flex items-center">
-                🤝 In Collaboration with IRI Nutraceuticals
+                🤝 In Collaboration with <a 
+                  href="https://irinutra.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-[#26C164] hover:text-[#B85E0E] transition-colors underline ml-2"
+                >
+                  IRI Nutraceuticals
+                </a>
               </h3>
               <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                Tirupati Herbal is proud to collaborate with <strong>IRI Nutraceuticals</strong> — a shared commitment toward global innovation in herbal and nutraceutical ingredient manufacturing.
+                Tirupati Herbal is proud to collaborate with <strong>
+                  <a 
+                    href="https://irinutra.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-[#26C164] hover:text-[#B85E0E] transition-colors"
+                  >
+                    IRI Nutraceuticals
+                  </a>
+                </strong> — a shared commitment toward global innovation in herbal and nutraceutical ingredient manufacturing.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
                 This partnership strengthens our product pipeline, R&D capabilities, and global reach across wellness and pharmaceutical industries.

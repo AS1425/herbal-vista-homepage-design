@@ -36,10 +36,10 @@ const OurFoundation = () => {
             </h2>
             <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
               <p>
-                With a focused mission to extract nature's best, we have built a strong reputation through <strong>certified processes, transparent business ethics, and consistent product outcomes</strong>.
+                At Tirupati Herbal, our core business centers around the manufacturing of <strong>herbal and botanical extracts, nutraceutical ingredients, and phytochemical actives</strong> tailored for global health and wellness industries.
               </p>
               <p>
-                From local sourcing in India to customized delivery for global clients – <strong>quality and compliance are always at the core</strong>.
+                With decades of experience, we operate with a commitment to <strong>scientific precision, stringent quality control, and sustainable sourcing</strong>.
               </p>
             </div>
           </div>
