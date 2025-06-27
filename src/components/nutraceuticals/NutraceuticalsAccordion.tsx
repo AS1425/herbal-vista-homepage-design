@@ -10,124 +10,52 @@ import {
 const NutraceuticalsAccordion = () => {
   const products = [
     {
-      name: "L-Arginine Base",
-      standardization: "98%",
-      testingMethod: "Titration",
-      description: "Supports nitric oxide production and circulation for cardiovascular health."
-    },
-    {
-      name: "L-Carnitine Tartrate",
-      standardization: "98%",
-      testingMethod: "HPLC",
-      description: "Essential for energy metabolism and fat burning processes."
-    },
-    {
-      name: "Creatine Monohydrate",
-      standardization: "99%",
+      name: "Beta Carotene Powder",
+      standardization: "10%",
       testingMethod: "UV",
-      description: "Enhances muscle strength, power, and athletic performance."
+      description: "Natural provitamin A for eye health and immune system support."
     },
     {
-      name: "Coenzyme Q10",
+      name: "Beta Carotene Oil",
+      standardization: "20%",
+      testingMethod: "UV",
+      description: "Concentrated oil-soluble beta carotene for enhanced bioavailability."
+    },
+    {
+      name: "Grape Seed Extract",
+      standardization: "95% OPC",
+      testingMethod: "HPLC",
+      description: "Powerful antioxidant complex for cardiovascular and skin health."
+    },
+    {
+      name: "Lutein Free Oleoresin",
+      standardization: "20%",
+      testingMethod: "HPLC",
+      description: "Oil-based lutein extract for optimal absorption and eye protection."
+    },
+    {
+      name: "Lutein Free Powder",
       standardization: "10%",
       testingMethod: "HPLC",
-      description: "Powerful antioxidant for heart and cellular energy production."
+      description: "Powdered lutein for macular health and blue light protection."
     },
     {
-      name: "Glucosamine Sulphate",
-      standardization: "99%",
-      testingMethod: "Titration",
-      description: "Supports joint health and cartilage maintenance."
-    },
-    {
-      name: "MSM (Methylsulfonylmethane)",
-      standardization: "99%",
-      testingMethod: "Titration",
-      description: "Natural sulfur compound supporting joint flexibility and comfort."
-    },
-    {
-      name: "Omega 3 Fish Oil",
-      standardization: "30% EPA, 20% DHA",
-      testingMethod: "GC",
-      description: "Essential fatty acids for brain, heart, and inflammatory response support."
-    },
-    {
-      name: "Multivitamin Blend",
-      standardization: "NA",
-      testingMethod: "Internal Standard",
-      description: "Comprehensive blend of essential vitamins for daily nutritional support."
-    },
-    {
-      name: "Vitamin C (Ascorbic Acid)",
-      standardization: "99%",
-      testingMethod: "Titration",
-      description: "Powerful antioxidant supporting immune function and collagen synthesis."
-    },
-    {
-      name: "Zinc Gluconate",
-      standardization: "12% Zn",
+      name: "Lycopene Oil",
+      standardization: "6%",
       testingMethod: "UV",
-      description: "Essential mineral for immune function and wound healing."
+      description: "Oil-soluble lycopene for prostate health and antioxidant protection."
     },
     {
-      name: "Magnesium Oxide",
-      standardization: "60% Mg",
-      testingMethod: "Titration",
-      description: "Vital mineral for muscle function, bone health, and energy metabolism."
-    },
-    {
-      name: "Calcium Citrate",
-      standardization: "21% Ca",
-      testingMethod: "Titration",
-      description: "Highly bioavailable calcium for bone health and muscle function."
-    },
-    {
-      name: "Lycopene 10%",
+      name: "Lycopene Powder",
       standardization: "10%",
       testingMethod: "HPLC",
-      description: "Potent carotenoid antioxidant supporting prostate and cardiovascular health."
+      description: "Concentrated lycopene powder for cardiovascular wellness support."
     },
     {
-      name: "Biotin",
-      standardization: "1%",
-      testingMethod: "HPLC",
-      description: "B-vitamin essential for hair, skin, nail health and energy metabolism."
-    },
-    {
-      name: "Inositol",
-      standardization: "99%",
-      testingMethod: "UV",
-      description: "Supports cellular signaling and mental wellness balance."
-    },
-    {
-      name: "Choline Bitartrate",
-      standardization: "98%",
-      testingMethod: "Titration",
-      description: "Essential nutrient for brain function and liver health."
-    },
-    {
-      name: "Alpha Lipoic Acid",
-      standardization: "98%",
-      testingMethod: "HPLC",
-      description: "Universal antioxidant supporting blood sugar balance and nerve health."
-    },
-    {
-      name: "L-Theanine",
-      standardization: "99%",
-      testingMethod: "HPLC",
-      description: "Promotes mental relaxation without drowsiness and stress relief."
-    },
-    {
-      name: "Vitamin B-Complex",
-      standardization: "Blended Actives",
-      testingMethod: "Internal Spec",
-      description: "Complete B-vitamin complex for energy production and nervous system support."
-    },
-    {
-      name: "Selenium Enriched Yeast",
-      standardization: "0.2% Se",
-      testingMethod: "AAS",
-      description: "Organic selenium for antioxidant protection and thyroid function."
+      name: "Spirulina",
+      standardization: "Protein 60%, Phycocyanin 15%",
+      testingMethod: "UV + Gravimetry",
+      description: "Complete superfood algae rich in protein and essential nutrients."
     }
   ];
 
@@ -148,7 +76,7 @@ const NutraceuticalsAccordion = () => {
       <div className="container mx-auto px-4 max-w-4xl relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-[#126D39] mb-4">
-            Our Nutraceutical Product Portfolio
+            Our Nutraceutical Extract Range
           </h2>
           <p className="text-lg text-gray-700">
             Science-backed ingredients with verified purity and potency for optimal wellness
@@ -163,13 +91,13 @@ const NutraceuticalsAccordion = () => {
               className="bg-white/95 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow backdrop-blur-sm"
             >
               <AccordionTrigger className="hover:no-underline px-6 py-4">
-                <div className="flex items-center space-x-4 text-left w-full">
+                <div className="flex items-start space-x-4 text-left w-full">
                   <div className="w-16 h-16 bg-[#26C164]/10 rounded-full flex items-center justify-center flex-shrink-0">
                     <div className="w-8 h-8 bg-[#26C164] rounded-full flex items-center justify-center">
                       <span className="text-white text-xs font-bold">{product.name.charAt(0)}</span>
                     </div>
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 min-w-0">
                     <h3 className="text-lg font-semibold text-[#126D39] mb-1">
                       {product.name}
                     </h3>

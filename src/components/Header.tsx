@@ -110,7 +110,7 @@ const Header = () => {
                       onClick={navigateToNutraceuticals}
                       className="w-full text-left px-3 py-2 text-[#126D39] hover:text-[#26C164] hover:bg-gray-50 rounded-md transition-colors font-medium"
                     >
-                      Nutraceutical Products
+                      Nutraceutical Extracts
                     </button>
                   </div>
                 </NavigationMenuContent>

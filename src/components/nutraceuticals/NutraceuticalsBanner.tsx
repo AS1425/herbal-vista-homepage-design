@@ -22,7 +22,7 @@ const NutraceuticalsBanner = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1518770660439-4636190af475')"
+          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/lovable-uploads/403a51e5-ad71-422a-9d58-4c485da20d7e.png')"
         }}
       />
       
@@ -34,7 +34,7 @@ const NutraceuticalsBanner = () => {
           }`}
           style={{ color: '#FFF8EC' }}
         >
-          Explore Our Nutraceutical Range
+          Explore Our Nutraceutical Extracts
         </h1>
         
         <p 
