@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MessageSquare } from "lucide-react";
+import { Phone, Mail, CheckCircle, Send, Users, Zap, DollarSign } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const InquiryForm = () => {
@@ -11,42 +11,35 @@ const InquiryForm = () => {
     name: "",
     email: "",
     phone: "",
-    company: "",
     message: ""
   });
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Create mailto link with form data
-    const subject = encodeURIComponent(`Inquiry from ${formData.name} - ${formData.company}`);
-    const body = encodeURIComponent(`
-Name: ${formData.name}
-Company: ${formData.company}
-Phone: ${formData.phone}
-Email: ${formData.email}
+    // Basic validation
+    if (!formData.name || !formData.email || !formData.message) {
+      toast({
+        title: "Please fill in all required fields",
+        variant: "destructive",
+      });
+      return;
+    }
 
-Message:
-${formData.message}
-    `);
-    
-    const mailtoLink = `mailto:tirupatiherbal07@gmail.com?subject=${subject}&body=${body}`;
-    window.location.href = mailtoLink;
-    
+    // Simulate form submission
+    setIsSubmitted(true);
     toast({
-      title: "Email client opened!",
-      description: "Your inquiry has been prepared in your default email client.",
+      title: "Message sent successfully!",
+      description: "We'll get back to you within 1-2 business days.",
     });
-    
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      company: "",
-      message: ""
-    });
+
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setIsSubmitted(false);
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    }, 3000);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -56,129 +49,136 @@ ${formData.message}
     });
   };
 
+  const usps = [
+    { icon: CheckCircle, text: "Free Sample Testing", description: "Try our extracts with complimentary samples." },
+    { icon: Zap, text: "Custom Formulations", description: "Products tailored to your requirements." },
+    { icon: Users, text: "Technical Support", description: "Expert guidance and documentation provided." },
+    { icon: DollarSign, text: "Competitive Pricing", description: "Get the best value for quality." }
+  ];
+
   return (
-    <section id="contact" className="py-20 bg-[#F8F9F4]">
+    <section id="contact" className="py-20 bg-gradient-to-r from-[#B85E0E] to-[#26C164]">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h3 className="text-sm font-semibold text-[#B85E0E] uppercase tracking-wider mb-2">
-              Get In Touch
-            </h3>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#126D39] mb-6 leading-tight">
-              Ready to Start Your <span className="text-[#26C164]">Journey?</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Contact us today to discuss your botanical extract requirements and discover how we can support your business growth
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Information */}
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-2xl font-bold text-[#126D39] mb-6">Let's Connect</h3>
-                <p className="text-gray-600 mb-8 leading-relaxed">
-                  Whether you're looking for standardized extracts, custom formulations, or partnership opportunities, 
-                  our team is here to help you achieve your goals.
-                </p>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Request Samples or a Custom Quote
+          </h2>
+          <p className="text-lg text-[#FFF8EC] max-w-2xl mx-auto">
+            Ready to experience the Tirupati Herbal difference? Reach out for samples, 
+            custom formulations, or any inquiries – our team is here to help.
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          {/* Left Column - Contact Details & USPs */}
+          <div className="space-y-8">
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-lg">
+              <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
+              
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center space-x-3">
+                  <Phone className="w-5 h-5 text-[#FFF8EC]" />
+                  <div>
+                    <p className="text-white font-medium">+91 74550 58849</p>
+                    <p className="text-[#FFF8EC]">+91 87554 24007</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center space-x-3">
+                  <Mail className="w-5 h-5 text-[#FFF8EC]" />
+                  <div>
+                    <p className="text-white">info@tirupatiherbal.com</p>
+                    <p className="text-[#FFF8EC]">kunal.goel@tirupatiherbal.com</p>
+                  </div>
+                </div>
               </div>
-
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4 p-4 bg-white rounded-lg shadow-sm">
-                  <div className="w-12 h-12 bg-[#26C164] bg-opacity-20 rounded-lg flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-[#26C164]" />
+              
+              <div className="space-y-4">
+                {usps.map((usp, index) => (
+                  <div key={index} className="flex items-start space-x-3">
+                    <usp.icon className="w-5 h-5 text-[#FFF8EC] mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="text-white font-medium">{usp.text}</p>
+                      <p className="text-[#FFF8EC] text-sm">{usp.description}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-[#126D39]">Call Us</h4>
-                    <p className="text-gray-600">+91 74550 58849</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4 p-4 bg-white rounded-lg shadow-sm">
-                  <div className="w-12 h-12 bg-[#26C164] bg-opacity-20 rounded-lg flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-[#26C164]" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-[#126D39]">Email Us</h4>
-                    <p className="text-gray-600">tirupatiherbal07@gmail.com</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4 p-4 bg-white rounded-lg shadow-sm">
-                  <div className="w-12 h-12 bg-[#26C164] bg-opacity-20 rounded-lg flex items-center justify-center">
-                    <MessageSquare className="w-6 h-6 text-[#26C164]" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-[#126D39]">WhatsApp</h4>
-                    <p className="text-gray-600">Quick responses on WhatsApp</p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
-
-            {/* Contact Form */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg">
-              <h3 className="text-2xl font-bold text-[#126D39] mb-6">Send us a Message</h3>
-              
+          </div>
+          
+          {/* Right Column - Inquiry Form */}
+          <div className="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-lg">
+            {!isSubmitted ? (
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
+                <div>
                   <Input
                     type="text"
                     name="name"
-                    placeholder="Your Name"
+                    placeholder="Your Name *"
                     value={formData.name}
                     onChange={handleChange}
-                    className="border-gray-300 focus:border-[#26C164]"
+                    className="bg-white bg-opacity-20 border-white border-opacity-30 text-white placeholder-gray-200 focus:border-[#FFF8EC]"
                     required
                   />
+                </div>
+                
+                <div>
                   <Input
                     type="email"
                     name="email"
-                    placeholder="Email Address"
+                    placeholder="Your Email *"
                     value={formData.email}
                     onChange={handleChange}
-                    className="border-gray-300 focus:border-[#26C164]"
+                    className="bg-white bg-opacity-20 border-white border-opacity-30 text-white placeholder-gray-200 focus:border-[#FFF8EC]"
                     required
                   />
                 </div>
                 
-                <div className="grid md:grid-cols-2 gap-4">
+                <div>
                   <Input
                     type="tel"
                     name="phone"
-                    placeholder="Phone Number"
+                    placeholder="Your Phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="border-gray-300 focus:border-[#26C164]"
-                  />
-                  <Input
-                    type="text"
-                    name="company"
-                    placeholder="Company Name"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="border-gray-300 focus:border-[#26C164]"
+                    className="bg-white bg-opacity-20 border-white border-opacity-30 text-white placeholder-gray-200 focus:border-[#FFF8EC]"
                   />
                 </div>
                 
-                <Textarea
-                  name="message"
-                  placeholder="Tell us about your requirements..."
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={5}
-                  className="border-gray-300 focus:border-[#26C164] resize-none"
-                  required
-                />
+                <div>
+                  <Textarea
+                    name="message"
+                    placeholder="Your Message *"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={5}
+                    className="bg-white bg-opacity-20 border-white border-opacity-30 text-white placeholder-gray-200 focus:border-[#FFF8EC] resize-none"
+                    required
+                  />
+                </div>
                 
                 <Button 
                   type="submit"
-                  className="w-full bg-[#26C164] text-white hover:bg-[#1F9B57] py-3 rounded-lg font-semibold transition-all duration-300"
+                  className="w-full bg-[#26C164] text-white hover:bg-[#1F9B57] py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg"
                 >
-                  Send Message
+                  <Send className="w-5 h-5 mr-2" />
+                  Submit Inquiry
                 </Button>
+                
+                <p className="text-[#FFF8EC] text-sm text-center">
+                  We'll get back to you within 1-2 business days.
+                </p>
               </form>
-            </div>
+            ) : (
+              <div className="text-center py-12">
+                <CheckCircle className="w-16 h-16 text-white mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
+                <p className="text-[#FFF8EC]">
+                  Thank you for your inquiry. We'll be in touch soon.
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </div>

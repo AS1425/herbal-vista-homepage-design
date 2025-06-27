@@ -1,60 +1,118 @@
 
-import { MapPin, Users, Globe, Award } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 const GlobalReach = () => {
-  const stats = [
-    {
-      icon: <Globe className="w-8 h-8" />,
-      number: "25+",
-      label: "Countries Served",
-      description: "Global distribution network"
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      number: "500+",
-      label: "Satisfied Clients",
-      description: "Trusted partnerships worldwide"
-    },
-    {
-      icon: <Award className="w-8 h-8" />,
-      number: "15+",
-      label: "Years Experience",
-      description: "Industry expertise and knowledge"
-    },
-    {
-      icon: <MapPin className="w-8 h-8" />,
-      number: "5",
-      label: "Manufacturing Units",
-      description: "State-of-the-art facilities"
+  const [isVisible, setIsVisible] = useState(false);
+  const [countAnimated, setCountAnimated] = useState(false);
+  const [countries, setCountries] = useState(0);
+  const [continents, setContinents] = useState(0);
+  const [clients, setClients] = useState(0);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          if (!countAnimated) {
+            animateCounters();
+            setCountAnimated(true);
+          }
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
     }
-  ];
+
+    return () => observer.disconnect();
+  }, [countAnimated]);
+
+  const animateCounters = () => {
+    const duration = 2000;
+    const steps = 60;
+    const countriesTarget = 25;
+    const continentsTarget = 6;
+    const clientsTarget = 500;
+
+    let step = 0;
+    const timer = setInterval(() => {
+      step++;
+      const progress = step / steps;
+      
+      setCountries(Math.floor(countriesTarget * progress));
+      setContinents(Math.floor(continentsTarget * progress));
+      setClients(Math.floor(clientsTarget * progress));
+
+      if (step >= steps) {
+        clearInterval(timer);
+        setCountries(countriesTarget);
+        setContinents(continentsTarget);
+        setClients(clientsTarget);
+      }
+    }, duration / steps);
+  };
 
   return (
-    <section className="py-16 bg-[#126D39] text-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h3 className="text-sm font-semibold text-[#26C164] uppercase tracking-wider mb-2">
-            Global Presence
-          </h3>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+    <section ref={sectionRef} className="py-20 bg-[#126D39] relative overflow-hidden">
+      {/* World map background */}
+      <div 
+        className="absolute inset-0 opacity-10"
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')",
+          backgroundSize: "cover",
+          backgroundPosition: "center"
+        }}
+      />
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-white mb-4">
             Supplying Extracts Across Continents
           </h2>
-          <p className="text-lg text-gray-200 max-w-2xl mx-auto leading-relaxed">
-            From local markets to international shores, our premium botanical extracts reach customers worldwide
-          </p>
         </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center p-6 bg-white/10 rounded-lg backdrop-blur-sm hover:bg-white/20 transition-all duration-300">
-              <div className="flex justify-center text-[#26C164] mb-4">
-                {stat.icon}
-              </div>
-              <div className="text-3xl font-bold mb-2">{stat.number}</div>
-              <div className="text-lg font-semibold mb-1">{stat.label}</div>
-              <div className="text-sm text-gray-300">{stat.description}</div>
+        
+        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
+          <div 
+            className={`text-center transition-all duration-1000 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+          >
+            <div className="text-5xl font-bold text-[#B85E0E] mb-2">
+              {countries}+
             </div>
-          ))}
+            <div className="text-white text-lg">Countries Served</div>
+          </div>
+          
+          <div 
+            className={`text-center transition-all duration-1000 delay-300 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+          >
+            <div className="text-5xl font-bold text-[#B85E0E] mb-2">
+              {continents}
+            </div>
+            <div className="text-white text-lg">Continents Covered</div>
+          </div>
+          
+          <div 
+            className={`text-center transition-all duration-1000 delay-500 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+          >
+            <div className="text-5xl font-bold text-[#B85E0E] mb-2">
+              {clients}+
+            </div>
+            <div className="text-white text-lg">Clients Globally</div>
+          </div>
+        </div>
+        
+        <div className="text-center">
+          <p className="text-[#FFF8EC] text-lg mb-8">
+            North America • Europe • Middle East • Southeast Asia • South America • Africa
+          </p>
         </div>
       </div>
     </section>

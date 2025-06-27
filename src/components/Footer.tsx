@@ -4,13 +4,11 @@ import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
   const { toast } = useToast();
-  const navigate = useNavigate();
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
@@ -33,26 +31,6 @@ const Footer = () => {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
-  };
-
-  const navigateToHome = () => {
-    navigate('/');
-  };
-
-  const navigateToAbout = () => {
-    navigate('/about');
-  };
-
-  const navigateToBotanicalExtracts = () => {
-    navigate('/botanical-extracts');
-  };
-
-  const navigateToCareer = () => {
-    navigate('/career');
-  };
-
-  const navigateToContact = () => {
-    navigate('/contact');
   };
 
   return (
@@ -82,7 +60,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <button 
-                  onClick={navigateToHome}
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="text-[#126D39] hover:text-[#26C164] transition-colors text-sm"
                 >
                   Home
@@ -90,7 +68,7 @@ const Footer = () => {
               </li>
               <li>
                 <button 
-                  onClick={navigateToAbout}
+                  onClick={() => scrollToSection("who-we-are")}
                   className="text-[#126D39] hover:text-[#26C164] transition-colors text-sm"
                 >
                   About Us
@@ -98,7 +76,7 @@ const Footer = () => {
               </li>
               <li>
                 <button 
-                  onClick={navigateToBotanicalExtracts}
+                  onClick={() => scrollToSection("products")}
                   className="text-[#126D39] hover:text-[#26C164] transition-colors text-sm"
                 >
                   Products
@@ -106,7 +84,7 @@ const Footer = () => {
               </li>
               <li>
                 <button 
-                  onClick={navigateToCareer}
+                  onClick={() => scrollToSection("career")}
                   className="text-[#126D39] hover:text-[#26C164] transition-colors text-sm"
                 >
                   Career
@@ -114,7 +92,7 @@ const Footer = () => {
               </li>
               <li>
                 <button 
-                  onClick={navigateToContact}
+                  onClick={() => scrollToSection("contact")}
                   className="text-[#126D39] hover:text-[#26C164] transition-colors text-sm"
                 >
                   Contact Us

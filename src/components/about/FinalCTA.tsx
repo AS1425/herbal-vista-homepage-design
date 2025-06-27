@@ -1,13 +1,13 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { useNavigate } from "react-router-dom";
 
 const FinalCTA = () => {
-  const navigate = useNavigate();
-
-  const navigateToContact = () => {
-    navigate('/contact');
+  const scrollToContact = () => {
+    const element = document.getElementById("contact");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -21,7 +21,7 @@ const FinalCTA = () => {
             Partner with Tirupati Herbal for certified, science-backed herbal extract solutions.
           </p>
           <Button 
-            onClick={navigateToContact}
+            onClick={scrollToContact}
             className="bg-[#26C164] hover:bg-[#1F9B57] text-white px-8 py-4 text-lg rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 group"
             style={{ boxShadow: '0 0 30px rgba(38, 193, 100, 0.3)' }}
           >

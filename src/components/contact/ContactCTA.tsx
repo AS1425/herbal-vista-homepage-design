@@ -3,11 +3,8 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 
 const ContactCTA = () => {
-  const scrollToForm = () => {
-    const element = document.querySelector('form');
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -20,7 +17,7 @@ const ContactCTA = () => {
           Reach out to us and let's grow together.
         </p>
         <Button 
-          onClick={scrollToForm}
+          onClick={scrollToTop}
           className="bg-[#26C164] hover:bg-[#1F9B57] text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
         >
           Get in Touch

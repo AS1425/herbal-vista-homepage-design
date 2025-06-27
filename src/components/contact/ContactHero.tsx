@@ -3,12 +3,12 @@ import React from "react";
 
 const ContactHero = () => {
   return (
-    <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden pt-24">
+    <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
       {/* Background image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/lovable-uploads/917a4954-64b0-484f-ab90-c6638e30460d.png')"
+          backgroundImage: "url('/lovable-uploads/d97efc36-ca54-4c39-b29d-0097ddea363c.png')"
         }}
       />
       
@@ -17,7 +17,7 @@ const ContactHero = () => {
       
       {/* Content overlay */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight">
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
           Let's Connect with Tirupati Herbal
         </h1>
         
