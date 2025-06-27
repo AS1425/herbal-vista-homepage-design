@@ -214,7 +214,7 @@ const ProductAccordion = () => {
       standardization: "Up to 60% Levodopa",
       testingMethod: "HPLC",
       description: "Mood and vitality support extract with natural L-DOPA compounds.",
-      image: "/lovable-uploads/1de69854-ba1b-48f8-bfc7-0c2831e9c04c.png"
+      image: "/lovable-uploads/fea2c226-75fc-4a5a-80b8-5c138b0fc00b.png"
     },
     {
       name: "Mulethi Extract",
@@ -223,7 +223,7 @@ const ProductAccordion = () => {
       standardization: "Up to 25% Glycyrrhizinic Acid",
       testingMethod: "HPLC",
       description: "Respiratory and digestive wellness extract with soothing properties.",
-      image: "/lovable-uploads/c6d12ca1-59dd-453b-9927-e8c086f765a1.png"
+      image: "/lovable-uploads/979c90fd-e2fd-47ce-b0cb-6c4fcf255ce3.png"
     },
     {
       name: "Pomegranate Extract",
@@ -232,7 +232,7 @@ const ProductAccordion = () => {
       standardization: "Up to 40% Ellagic Acid",
       testingMethod: "HPLC",
       description: "Antioxidant powerhouse extract supporting heart and cellular health.",
-      image: "/lovable-uploads/1de69854-ba1b-48f8-bfc7-0c2831e9c04c.png"
+      image: "/lovable-uploads/f61ce68c-2b1a-415b-80c5-832897241569.png"
     },
     {
       name: "Safed Musli",
@@ -241,7 +241,7 @@ const ProductAccordion = () => {
       standardization: "Up to 50% Saponins",
       testingMethod: "Gravimetric",
       description: "Traditional vitality enhancer supporting energy and reproductive health.",
-      image: "/lovable-uploads/c6d12ca1-59dd-453b-9927-e8c086f765a1.png"
+      image: "/lovable-uploads/fe1bb5f8-8fab-422e-bcb7-f8d0ef29342e.png"
     },
     {
       name: "Senna Extract",
@@ -250,7 +250,7 @@ const ProductAccordion = () => {
       standardization: "Up to 60% Calcium Sennoside",
       testingMethod: "UV",
       description: "Natural digestive support extract promoting healthy bowel function.",
-      image: "/lovable-uploads/6501f360-bb41-43c6-858b-203c0ebc0573.png"
+      image: "/lovable-uploads/9d130796-b1ca-40bc-be53-0a03d1be0366.png"
     },
     {
       name: "Tribulus Extract",
@@ -259,7 +259,7 @@ const ProductAccordion = () => {
       standardization: "Up to 60% Steroidal Saponins",
       testingMethod: "Gravimetric",
       description: "Athletic performance support extract enhancing strength and endurance.",
-      image: "/lovable-uploads/6501f360-bb41-43c6-858b-203c0ebc0573.png"
+      image: "/lovable-uploads/f75285bc-8e4e-4701-a44e-ef2937665689.png"
     },
     {
       name: "Turmeric Extract",
@@ -268,7 +268,7 @@ const ProductAccordion = () => {
       standardization: "Up to 95% Curcuminoids",
       testingMethod: "HPLC",
       description: "Golden anti-inflammatory extract supporting joint health and wellness.",
-      image: "/lovable-uploads/c6d12ca1-59dd-453b-9927-e8c086f765a1.png"
+      image: "/lovable-uploads/f419e879-b16a-4ba2-859d-13a80dcf42b6.png"
     },
     {
       name: "Valerian Extract",
@@ -277,7 +277,7 @@ const ProductAccordion = () => {
       standardization: "0.8% Valerenic Acid (Powder), 10% Valerenic Acid (Paste)",
       testingMethod: "HPLC",
       description: "Natural relaxation support extract promoting restful sleep and calm.",
-      image: "/lovable-uploads/c6d12ca1-59dd-453b-9927-e8c086f765a1.png"
+      image: "/lovable-uploads/c7be7610-a4fb-4668-b8fc-66cbb996afe2.png"
     }
   ];
 
