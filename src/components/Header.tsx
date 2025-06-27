@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -54,7 +53,7 @@ const Header = () => {
           : "bg-[#F8F9F4] h-20"
       }`}
     >
-      <div className="container mx-auto px-4 h-full flex items-center justify-between">
+      <div className="container mx-auto px-6 h-full flex items-center justify-between max-w-7xl">
         <div 
           className="flex items-center cursor-pointer transition-all duration-300 py-2 px-3"
           onClick={navigateHome}
