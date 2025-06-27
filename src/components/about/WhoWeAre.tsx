@@ -73,8 +73,8 @@ const WhoWeAre = () => {
 
         {/* IRI Collaboration Section */}
         <div className="mb-16 bg-white rounded-2xl p-8 shadow-lg">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
+          <div className="grid md:grid-cols-3 gap-8 items-center">
+            <div className="md:col-span-2">
               <h3 className="text-3xl font-bold text-[#126D39] mb-4 flex items-center">
                 🤝 In Collaboration with IRI Nutraceuticals
               </h3>
@@ -94,9 +94,13 @@ const WhoWeAre = () => {
                 This partnership strengthens our product pipeline, R&D capabilities, and global reach across wellness and pharmaceutical industries.
               </p>
             </div>
-            <div className="flex justify-center">
-              <div className="w-32 h-32 bg-gradient-to-r from-[#26C164] to-[#B85E0E] rounded-full flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-lg">IRI</span>
+            <div className="flex justify-center md:justify-end">
+              <div className="max-w-[150px] w-full">
+                <img 
+                  src="/lovable-uploads/7a59353d-294d-4538-9df2-44cc1522548c.png" 
+                  alt="IRI Nutraceuticals Logo"
+                  className="w-full h-auto object-contain"
+                />
               </div>
             </div>
           </div>

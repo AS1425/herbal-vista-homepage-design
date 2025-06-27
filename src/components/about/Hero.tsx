@@ -27,12 +27,12 @@ const Hero = () => {
       ref={sectionRef}
       className="relative min-h-screen flex items-center justify-center"
       style={{
-        background: 'linear-gradient(135deg, #126D39 0%, #26C164 100%)'
+        background: 'linear-gradient(135deg, #26C164 0%, #126D39 100%)'
       }}
     >
       {/* Background overlay */}
       <div 
-        className="absolute inset-0 bg-black bg-opacity-30"
+        className="absolute inset-0 bg-black bg-opacity-20"
       />
       
       {/* Content */}
