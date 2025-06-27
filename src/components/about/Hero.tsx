@@ -25,7 +25,7 @@ const Hero = () => {
   return (
     <section 
       ref={sectionRef}
-      className="relative min-h-screen flex items-center justify-center"
+      className="relative min-h-[80vh] flex items-center justify-center pt-20"
       style={{
         backgroundImage: 'url(/lovable-uploads/eb5daccc-f442-482a-865a-6f7365a41a49.png)',
         backgroundSize: 'cover',

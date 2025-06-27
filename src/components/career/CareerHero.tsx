@@ -8,7 +8,7 @@ const CareerHero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/lovable-uploads/60f0997f-2455-49ae-8127-5870685f915f.png')"
+          backgroundImage: "url('/lovable-uploads/273a442d-42fe-4dc8-942a-637e52fcfa66.png')"
         }}
       />
     </section>
