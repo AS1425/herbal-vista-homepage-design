@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -55,6 +54,10 @@ const Header = () => {
 
   const navigateHome = () => {
     navigate('/');
+  };
+
+  const navigateToCareer = () => {
+    navigate('/career');
   };
 
   return (
@@ -119,7 +122,7 @@ const Header = () => {
           </NavigationMenu>
 
           <button 
-            onClick={() => scrollToSection("career")}
+            onClick={navigateToCareer}
             className="text-[#126D39] hover:text-[#26C164] transition-colors font-medium"
           >
             Career
