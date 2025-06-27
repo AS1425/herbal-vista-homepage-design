@@ -3,7 +3,7 @@ import React from "react";
 
 const ContactHero = () => {
   return (
-    <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+    <section className="relative h-[60vh] min-h-[350px] flex items-center justify-center overflow-hidden pt-20">
       {/* Background image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -17,7 +17,7 @@ const ContactHero = () => {
       
       {/* Content overlay */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight">
           Let's Connect with Tirupati Herbal
         </h1>
         
