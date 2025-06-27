@@ -1,4 +1,3 @@
-
 import React from "react";
 import {
   Accordion,
@@ -89,7 +88,7 @@ const ProductAccordion = () => {
       standardization: "Up to 50% Polyphenols",
       testingMethod: "UV",
       description: "Aromatic spice extract with metabolic and antioxidant properties.",
-      image: "/lovable-uploads/c6d12ca1-59dd-453b-9927-e8c086f765a1.png"
+      image: "/lovable-uploads/7b75c442-8113-4f0c-be39-566ddd0b9f5b.png"
     },
     {
       name: "Cocoa Extract",
@@ -98,7 +97,7 @@ const ProductAccordion = () => {
       standardization: "Up to 20% Theobromine, 60% Polyphenols",
       testingMethod: "HPLC, UV",
       description: "Rich antioxidant extract supporting cardiovascular and cognitive health.",
-      image: "/lovable-uploads/1de69854-ba1b-48f8-bfc7-0c2831e9c04c.png"
+      image: "/lovable-uploads/b70b4a6c-6536-471a-af61-13fc0f45b882.png"
     },
     {
       name: "Cranberry Extract",
@@ -107,7 +106,7 @@ const ProductAccordion = () => {
       standardization: "25% Anthocyanins",
       testingMethod: "UV",
       description: "Urinary tract health support with powerful antioxidant compounds.",
-      image: "/lovable-uploads/1de69854-ba1b-48f8-bfc7-0c2831e9c04c.png"
+      image: "/lovable-uploads/b3adaf72-6d7a-49ec-ad2a-b2ec923175d3.png"
     },
     {
       name: "Fenugreek Extract",
@@ -116,7 +115,7 @@ const ProductAccordion = () => {
       standardization: "Up to 90% 4-hydroxyisoleucine, 50% Saponins",
       testingMethod: "HPLC, Gravimetric",
       description: "Metabolic support extract for healthy blood sugar and digestive wellness.",
-      image: "/lovable-uploads/1de69854-ba1b-48f8-bfc7-0c2831e9c04c.png"
+      image: "/lovable-uploads/be4c8f5f-3aad-4cee-9057-f77bb0da9117.png"
     },
     {
       name: "Garcinia Cambogia Extract",
@@ -125,7 +124,7 @@ const ProductAccordion = () => {
       standardization: "70% Hydroxycitric Acid (Water + Non-Water Soluble)",
       testingMethod: "Titration",
       description: "Natural weight management support with appetite control properties.",
-      image: "/lovable-uploads/1de69854-ba1b-48f8-bfc7-0c2831e9c04c.png"
+      image: "/lovable-uploads/6cc53dd7-ee0b-43ae-a156-ba47abb941f0.png"
     },
     {
       name: "Ginger Extract",
@@ -134,7 +133,7 @@ const ProductAccordion = () => {
       standardization: "25% Gingerols Powder, 40% Gingerol Oleoresin",
       testingMethod: "HPLC",
       description: "Digestive wellness extract with anti-inflammatory and warming properties.",
-      image: "/lovable-uploads/c6d12ca1-59dd-453b-9927-e8c086f765a1.png"
+      image: "/lovable-uploads/7fdb8d63-e01c-4158-ae7c-0f0da4e2a74d.png"
     },
     {
       name: "Ginseng Extract",
@@ -143,7 +142,7 @@ const ProductAccordion = () => {
       standardization: "80% Ginsenosides (UV), 40% Ginsenosides (HPLC)",
       testingMethod: "UV, HPLC",
       description: "Adaptogenic energy enhancer supporting vitality and mental performance.",
-      image: "/lovable-uploads/c6d12ca1-59dd-453b-9927-e8c086f765a1.png"
+      image: "/lovable-uploads/475b8812-7dc7-4d52-afea-ea0324da1c18.png"
     },
     {
       name: "Gotukola Extract",
