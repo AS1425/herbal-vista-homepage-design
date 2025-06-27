@@ -2,7 +2,6 @@
 import Hero from "@/components/about/Hero";
 import WhoWeAre from "@/components/about/WhoWeAre";
 import QualityCommitment from "@/components/about/QualityCommitment";
-import LeadershipTeam from "@/components/about/LeadershipTeam";
 import OurFoundation from "@/components/about/OurFoundation";
 import FinalCTA from "@/components/about/FinalCTA";
 import Header from "@/components/Header";
@@ -16,7 +15,6 @@ const About = () => {
       <Hero />
       <WhoWeAre />
       <QualityCommitment />
-      <LeadershipTeam />
       <OurFoundation />
       <FinalCTA />
       <Footer />
