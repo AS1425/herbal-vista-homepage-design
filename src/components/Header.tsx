@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -62,9 +63,9 @@ const Header = () => {
             src="/lovable-uploads/6516ad55-a994-4457-8472-e7432ce3c894.png" 
             alt="Tirupati Herbal Logo" 
             className={`transition-all duration-300 ${
-              isScrolled ? "h-13 w-auto" : "h-16 w-auto"
+              isScrolled ? "h-10 w-auto" : "h-16 w-auto"
             }`}
-            style={{ maxWidth: isScrolled ? '200px' : '220px' }}
+            style={{ maxWidth: isScrolled ? '180px' : '240px' }}
           />
         </div>
         
