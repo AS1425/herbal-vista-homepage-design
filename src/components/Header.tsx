@@ -50,13 +50,13 @@ const Header = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? "bg-[#E9F5EE] shadow-lg h-16" 
-          : "bg-[#E9F5EE] h-20"
+          ? "bg-[#F8F9F4] shadow-lg h-16" 
+          : "bg-[#F8F9F4] h-20"
       }`}
     >
       <div className="container mx-auto px-4 h-full flex items-center justify-between">
         <div 
-          className="flex items-center cursor-pointer transition-all duration-300 py-2 px-1"
+          className="flex items-center cursor-pointer transition-all duration-300 py-2 px-3"
           onClick={navigateHome}
         >
           <img 
@@ -65,7 +65,7 @@ const Header = () => {
             className={`transition-all duration-300 ${
               isScrolled ? "h-12 w-auto" : "h-16 w-auto"
             }`}
-            style={{ maxWidth: '160px' }}
+            style={{ maxWidth: isScrolled ? '180px' : '200px' }}
           />
         </div>
         
