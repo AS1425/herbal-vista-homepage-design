@@ -52,7 +52,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Decorative elements */}
+      {/* Decorative wave elements */}
       <div className="absolute bottom-0 left-0 w-full">
         <svg viewBox="0 0 1200 120" className="w-full h-auto">
           <path 

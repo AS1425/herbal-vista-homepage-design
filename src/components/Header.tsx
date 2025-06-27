@@ -50,8 +50,8 @@ const Header = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? "bg-[#126D39] shadow-lg h-16" 
-          : "bg-transparent h-20"
+          ? "bg-[#E9F5EE] shadow-lg h-16" 
+          : "bg-[#E9F5EE] h-20"
       }`}
     >
       <div className="container mx-auto px-4 h-full flex items-center justify-between">
@@ -63,39 +63,40 @@ const Header = () => {
             src="/lovable-uploads/6516ad55-a994-4457-8472-e7432ce3c894.png" 
             alt="Tirupati Herbal Logo" 
             className={`transition-all duration-300 ${
-              isScrolled ? "h-10" : "h-14"
+              isScrolled ? "h-12 w-auto" : "h-16 w-auto"
             }`}
+            style={{ maxWidth: '160px' }}
           />
         </div>
         
         <nav className="hidden md:flex items-center space-x-8">
           <button 
             onClick={navigateHome}
-            className="text-white hover:text-[#26C164] transition-colors font-medium"
+            className="text-[#126D39] hover:text-[#26C164] transition-colors font-medium"
           >
             Home
           </button>
           <button 
             onClick={navigateToAbout}
-            className="text-white hover:text-[#26C164] transition-colors font-medium"
+            className="text-[#126D39] hover:text-[#26C164] transition-colors font-medium"
           >
             About Us
           </button>
           <button 
             onClick={navigateToBotanicalExtracts}
-            className="text-white hover:text-[#26C164] transition-colors font-medium"
+            className="text-[#126D39] hover:text-[#26C164] transition-colors font-medium"
           >
             Products
           </button>
           <button 
             onClick={() => scrollToSection("career")}
-            className="text-white hover:text-[#26C164] transition-colors font-medium"
+            className="text-[#126D39] hover:text-[#26C164] transition-colors font-medium"
           >
             Career
           </button>
           <button 
             onClick={() => scrollToSection("contact")}
-            className="text-white hover:text-[#26C164] transition-colors font-medium"
+            className="text-[#126D39] hover:text-[#26C164] transition-colors font-medium"
           >
             Contact Us
           </button>

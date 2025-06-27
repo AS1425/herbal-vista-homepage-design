@@ -1,3 +1,4 @@
+
 import { Mail, Phone, MapPin, Facebook, Linkedin, Instagram } from "lucide-react";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
@@ -38,11 +39,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand Info */}
           <div className="space-y-4">
-            <div className="py-2">
+            <div className="bg-[#E9F5EE] rounded-lg p-4 inline-block">
               <img 
                 src="/lovable-uploads/6516ad55-a994-4457-8472-e7432ce3c894.png" 
                 alt="Tirupati Herbal Logo" 
                 className="h-16 w-auto"
+                style={{ maxWidth: '140px' }}
               />
             </div>
             <p className="text-[#FFF8EC] text-sm leading-relaxed">
