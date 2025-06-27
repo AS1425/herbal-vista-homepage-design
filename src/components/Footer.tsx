@@ -40,7 +40,7 @@ const Footer = () => {
           {/* Brand Info */}
           <div className="space-y-4">
             <img 
-              src="/lovable-uploads/64c539e1-444d-445b-a5a2-f0b62d619ae1.png" 
+              src="/lovable-uploads/0ac79ddb-56c3-484d-b808-ca2dc06ab6e8.png" 
               alt="Tirupati Herbal Logo" 
               className="h-12"
             />
@@ -120,8 +120,26 @@ const Footer = () => {
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-[#FFF8EC]" />
                 <div>
-                  <p className="text-[#FFF8EC] text-sm">info@tirupatiherbal.com</p>
-                  <p className="text-[#FFF8EC] text-sm">kunal.goel@tirupatiherbal.com</p>
+                  <a 
+                    href="mailto:info@tirupatiherbal.com"
+                    className="text-[#FFF8EC] text-sm hover:text-[#26C164] transition-colors"
+                  >
+                    info@tirupatiherbal.com
+                  </a>
+                  <br />
+                  <a 
+                    href="mailto:kunal.goel@tirupatiherbal.com"
+                    className="text-[#FFF8EC] text-sm hover:text-[#26C164] transition-colors"
+                  >
+                    kunal.goel@tirupatiherbal.com
+                  </a>
+                  <br />
+                  <a 
+                    href="mailto:tirupatiherbal07@gmail.com"
+                    className="text-[#FFF8EC] text-sm hover:text-[#26C164] transition-colors"
+                  >
+                    tirupatiherbal07@gmail.com
+                  </a>
                 </div>
               </div>
             </div>

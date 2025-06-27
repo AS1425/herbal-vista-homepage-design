@@ -57,7 +57,7 @@ const Header = () => {
       <div className="container mx-auto px-4 h-full flex items-center justify-between">
         <div className="flex items-center cursor-pointer" onClick={navigateHome}>
           <img 
-            src="/lovable-uploads/64c539e1-444d-445b-a5a2-f0b62d619ae1.png" 
+            src="/lovable-uploads/0ac79ddb-56c3-484d-b808-ca2dc06ab6e8.png" 
             alt="Tirupati Herbal Logo" 
             className={`transition-all duration-300 ${
               isScrolled ? "h-8" : "h-12"

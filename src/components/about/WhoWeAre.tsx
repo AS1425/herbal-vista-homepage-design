@@ -44,7 +44,7 @@ const WhoWeAre = () => {
             >
               <img 
                 src="/lovable-uploads/0f939594-4bd5-47ba-893b-b2e6d73237aa.png" 
-                alt="Modern laboratory with Senna pods and botanical extracts"
+                alt="Modern laboratory with botanical extracts and herbal ingredients"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -65,8 +65,30 @@ const WhoWeAre = () => {
                 <strong>Tirupati Herbal</strong> is an <strong>ISO 9001:2015, GMP and HALAL certified</strong> company based in Bazpur, District Udham Singh Nagar, Uttarakhand, India.
               </p>
               <p>
-                Our core business encompasses manufacturing of <strong>Calcium Sennoside & Extracts of Senna leaves and pods</strong>.
+                Our core business encompasses the development and manufacturing of <strong>herbal extracts, botanical actives, nutraceutical formulations, and phytochemicals</strong> that serve the health, wellness, and functional food sectors.
               </p>
+            </div>
+          </div>
+        </div>
+
+        {/* IRI Collaboration Section */}
+        <div className="mb-16 bg-white rounded-2xl p-8 shadow-lg">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 className="text-3xl font-bold text-[#126D39] mb-4 flex items-center">
+                🤝 In Collaboration with IRI Nutraceuticals
+              </h3>
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                Tirupati Herbal is proud to collaborate with <strong>IRI Nutraceuticals</strong> — a shared commitment toward global innovation in herbal and nutraceutical ingredient manufacturing.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                This partnership strengthens our product pipeline, R&D capabilities, and global reach across wellness and pharmaceutical industries.
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <div className="w-32 h-32 bg-gradient-to-r from-[#26C164] to-[#B85E0E] rounded-full flex items-center justify-center shadow-lg">
+                <span className="text-white font-bold text-lg">IRI</span>
+              </div>
             </div>
           </div>
         </div>
