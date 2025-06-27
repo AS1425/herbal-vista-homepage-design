@@ -151,7 +151,7 @@ const ProductAccordion = () => {
       standardization: "50% Triterpenes / Asiaticosides",
       testingMethod: "HPLC",
       description: "Brain health support extract enhancing cognitive function and circulation.",
-      image: "/lovable-uploads/6501f360-bb41-43c6-858b-203c0ebc0573.png"
+      image: "/lovable-uploads/06e42e75-28a9-4f00-8703-3aa1ca373c0d.png"
     },
     {
       name: "Green Coffee Extract",
@@ -160,7 +160,7 @@ const ProductAccordion = () => {
       standardization: "Up to 60% Chlorogenic Acid",
       testingMethod: "HPLC",
       description: "Antioxidant-rich extract supporting metabolic health and weight management.",
-      image: "/lovable-uploads/1de69854-ba1b-48f8-bfc7-0c2831e9c04c.png"
+      image: "/lovable-uploads/08e9d67e-6bff-4b39-bb79-f7d7ab08c1ef.png"
     },
     {
       name: "Green Tea Extract",
@@ -169,7 +169,7 @@ const ProductAccordion = () => {
       standardization: "Up to 50% EGCG",
       testingMethod: "HPLC",
       description: "Powerful antioxidant extract supporting metabolism and cellular health.",
-      image: "/lovable-uploads/6501f360-bb41-43c6-858b-203c0ebc0573.png"
+      image: "/lovable-uploads/71203952-283e-4451-b9b2-b3bd7dfbf43d.png"
     },
     {
       name: "Guggul Extract",
@@ -178,7 +178,7 @@ const ProductAccordion = () => {
       standardization: "Up to 10% Guggulsterones",
       testingMethod: "HPLC",
       description: "Traditional lipid management extract supporting healthy cholesterol levels.",
-      image: "/lovable-uploads/fc6735d8-6233-4ebc-8788-74ae1f914092.png"
+      image: "/lovable-uploads/2c52831a-027c-4203-9f7c-43dd7eae4cc6.png"
     },
     {
       name: "Gymnema Extract",
@@ -187,7 +187,7 @@ const ProductAccordion = () => {
       standardization: "Up to 75% Gymnemic Acids",
       testingMethod: "Gravimetry",
       description: "Sugar control botanical extract supporting healthy glucose metabolism.",
-      image: "/lovable-uploads/6501f360-bb41-43c6-858b-203c0ebc0573.png"
+      image: "/lovable-uploads/3ebe5a42-d4f0-49da-843b-fe3e253f0590.png"
     },
     {
       name: "Kalmegh Extract",
@@ -196,7 +196,7 @@ const ProductAccordion = () => {
       standardization: "Up to 95% Andrographolide",
       testingMethod: "HPLC",
       description: "Immune system support extract with natural detoxifying properties.",
-      image: "/lovable-uploads/6501f360-bb41-43c6-858b-203c0ebc0573.png"
+      image: "/lovable-uploads/fe0fa698-5c68-477d-a337-81729e9838f8.png"
     },
     {
       name: "Mangosteen Extract",
@@ -205,7 +205,7 @@ const ProductAccordion = () => {
       standardization: "Up to 40% Mangostin",
       testingMethod: "HPLC",
       description: "Antioxidant-rich tropical extract supporting immune and skin health.",
-      image: "/lovable-uploads/1de69854-ba1b-48f8-bfc7-0c2831e9c04c.png"
+      image: "/lovable-uploads/56d1512b-d4b6-43f3-b2b6-1fdfb69255a1.png"
     },
     {
       name: "Mucuna Extract",
