@@ -2,6 +2,13 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { useNavigate, useLocation } from "react-router-dom";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,6 +49,10 @@ const Header = () => {
     navigate('/botanical-extracts');
   };
 
+  const navigateToNutraceuticals = () => {
+    navigate('/nutraceuticals');
+  };
+
   const navigateHome = () => {
     navigate('/');
   };
@@ -80,12 +91,33 @@ const Header = () => {
           >
             About Us
           </button>
-          <button 
-            onClick={navigateToBotanicalExtracts}
-            className="text-[#126D39] hover:text-[#26C164] transition-colors font-medium"
-          >
-            Products
-          </button>
+          
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="text-[#126D39] hover:text-[#26C164] transition-colors font-medium bg-transparent hover:bg-transparent data-[state=open]:bg-transparent">
+                  Products
+                </NavigationMenuTrigger>
+                <NavigationMenuContent className="min-w-[200px] bg-white border border-gray-200 shadow-lg rounded-md">
+                  <div className="p-2 space-y-1">
+                    <button
+                      onClick={navigateToBotanicalExtracts}
+                      className="w-full text-left px-3 py-2 text-[#126D39] hover:text-[#26C164] hover:bg-gray-50 rounded-md transition-colors font-medium"
+                    >
+                      Botanical Extracts
+                    </button>
+                    <button
+                      onClick={navigateToNutraceuticals}
+                      className="w-full text-left px-3 py-2 text-[#126D39] hover:text-[#26C164] hover:bg-gray-50 rounded-md transition-colors font-medium"
+                    >
+                      Nutraceutical Products
+                    </button>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+
           <button 
             onClick={() => scrollToSection("career")}
             className="text-[#126D39] hover:text-[#26C164] transition-colors font-medium"
