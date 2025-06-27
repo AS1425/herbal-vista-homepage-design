@@ -22,7 +22,7 @@ const BotanicalExtractsBanner = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')"
+          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/lovable-uploads/d636609e-2c24-4b54-b43e-0d0f372b6997.png')"
         }}
       />
       
@@ -32,9 +32,9 @@ const BotanicalExtractsBanner = () => {
           className={`text-4xl md:text-6xl font-bold mb-6 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
-          style={{ color: '#26C164' }}
+          style={{ color: '#FFF8EC' }}
         >
-          Botanical Extracts
+          Our Botanical Extracts
         </h1>
         
         <p 
@@ -42,7 +42,7 @@ const BotanicalExtractsBanner = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          Standardized herbal ingredients manufactured with purity, precision, and consistency.
+          Premium herbal ingredients crafted with precision and backed by science for optimal potency and purity.
         </p>
       </div>
       
