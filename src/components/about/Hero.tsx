@@ -27,12 +27,15 @@ const Hero = () => {
       ref={sectionRef}
       className="relative min-h-screen flex items-center justify-center"
       style={{
-        background: 'linear-gradient(135deg, #1E774C 0%, #126D39 100%)'
+        backgroundImage: 'url(/lovable-uploads/eb5daccc-f442-482a-865a-6f7365a41a49.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
       }}
     >
       {/* Background overlay */}
       <div 
-        className="absolute inset-0 bg-black bg-opacity-20"
+        className="absolute inset-0 bg-black bg-opacity-40"
       />
       
       {/* Content */}

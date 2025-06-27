@@ -63,9 +63,9 @@ const Header = () => {
             src="/lovable-uploads/6516ad55-a994-4457-8472-e7432ce3c894.png" 
             alt="Tirupati Herbal Logo" 
             className={`transition-all duration-300 ${
-              isScrolled ? "h-12 w-auto" : "h-16 w-auto"
+              isScrolled ? "h-14 w-auto" : "h-18 w-auto"
             }`}
-            style={{ maxWidth: isScrolled ? '180px' : '200px' }}
+            style={{ maxWidth: isScrolled ? '240px' : '280px' }}
           />
         </div>
         

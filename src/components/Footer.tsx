@@ -43,8 +43,8 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/6516ad55-a994-4457-8472-e7432ce3c894.png" 
                 alt="Tirupati Herbal Logo" 
-                className="h-20 w-auto"
-                style={{ maxWidth: '160px' }}
+                className="h-24 w-auto"
+                style={{ maxWidth: '200px' }}
               />
             </div>
             <p className="text-[#126D39] text-sm leading-relaxed">
