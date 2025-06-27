@@ -14,7 +14,7 @@ const CareerHero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "linear-gradient(rgba(38, 193, 100, 0.6), rgba(18, 109, 57, 0.6)), url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')"
+          backgroundImage: "url('/lovable-uploads/60f0997f-2455-49ae-8127-5870685f915f.png')"
         }}
       />
       

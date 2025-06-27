@@ -11,10 +11,10 @@ const FooterCTA = () => {
         <p className="text-lg text-white">
           Email us directly at{" "}
           <a 
-            href="mailto:hr@tirupatiherbal.com" 
+            href="mailto:info@tirupatiherbal.com" 
             className="text-[#26C164] hover:text-white transition-colors duration-300 underline"
           >
-            hr@tirupatiherbal.com
+            info@tirupatiherbal.com
           </a>
         </p>
       </div>
