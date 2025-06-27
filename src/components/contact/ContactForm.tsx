@@ -198,8 +198,12 @@ const ContactForm = () => {
                 <div className="flex items-start space-x-4">
                   <Mail className="w-6 h-6 text-[#26C164] mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-[#126D39] mb-1">Email Address</h4>
-                    <p className="text-gray-600">tirupatiherbal07@gmail.com</p>
+                    <h4 className="font-semibold text-[#126D39] mb-1">Email Addresses</h4>
+                    <p className="text-gray-600">
+                      tirupatiherbal07@gmail.com<br />
+                      info@tirupatiherbal.com<br />
+                      sales@tirupatiherbal.com
+                    </p>
                   </div>
                 </div>
               </div>
@@ -210,14 +214,14 @@ const ContactForm = () => {
               <h3 className="text-2xl font-bold text-[#126D39] mb-4">Find Us</h3>
               <div className="w-full h-64 bg-gray-200 rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3515.123456789!2d79.1234567!3d28.9876543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDU5JzE1LjYiTiA3OcKwMDcnMjQuNCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.4757845547437!2d79.1087967!3d29.2847058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a09addae2a0061%3A0x7a5ca8e0e5a7e8a2!2sChakarpur%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1703176800000!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Tirupati Herbal Location"
+                  title="Tirupati Herbal Location - Chakarpur, Bazpur, Udham Singh Nagar, Uttarakhand"
                 />
               </div>
             </div>
