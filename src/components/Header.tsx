@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -58,6 +59,10 @@ const Header = () => {
 
   const navigateToCareer = () => {
     navigate('/career');
+  };
+
+  const navigateToContact = () => {
+    navigate('/contact');
   };
 
   return (
@@ -128,7 +133,7 @@ const Header = () => {
             Career
           </button>
           <button 
-            onClick={() => scrollToSection("contact")}
+            onClick={navigateToContact}
             className="text-[#126D39] hover:text-[#26C164] transition-colors font-medium"
           >
             Contact Us
@@ -136,7 +141,7 @@ const Header = () => {
         </nav>
 
         <Button 
-          onClick={() => scrollToSection("contact")}
+          onClick={navigateToContact}
           className="bg-[#B85E0E] hover:bg-[#A0520C] text-white px-6 py-2 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 flex-shrink-0"
         >
           Get Quote
