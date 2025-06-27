@@ -63,8 +63,8 @@ const Header = () => {
           <img 
             src="/lovable-uploads/6516ad55-a994-4457-8472-e7432ce3c894.png" 
             alt="Tirupati Herbal Logo" 
-            className="h-14 w-auto transition-all duration-300"
-            style={{ maxWidth: '220px' }}
+            className="h-15 w-auto transition-all duration-300"
+            style={{ maxWidth: '250px' }}
           />
         </div>
         
