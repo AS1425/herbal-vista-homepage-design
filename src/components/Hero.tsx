@@ -1,15 +1,8 @@
 
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 
 const Hero = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
   const scrollToProducts = () => {
     const element = document.getElementById("products");
     if (element) {
@@ -26,45 +19,6 @@ const Hero = () => {
           backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/lovable-uploads/834a476b-44bd-443c-a9c4-1b14db771075.png')"
         }}
       />
-      
-      {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <h1 
-          className={`text-4xl md:text-6xl font-bold mb-6 transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-          style={{ color: '#26C164' }}
-        >
-          Pure Botanical Extracts
-        </h1>
-        
-        <h2 
-          className={`text-2xl md:text-3xl font-semibold mb-6 text-white transition-all duration-1000 delay-200 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
-          Backed by Nature, Perfected by Science
-        </h2>
-        
-        <p 
-          className={`text-lg md:text-xl text-gray-200 mb-8 leading-relaxed transition-all duration-1000 delay-300 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
-          Tailored, lab-verified herbal extracts for health, wellness, and nutrition, 
-          ensuring consistency, potency, and purity.
-        </p>
-        
-        <Button 
-          onClick={scrollToProducts}
-          className={`bg-[#26C164] hover:bg-[#1F9B57] text-white px-8 py-4 text-lg rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-          style={{ transitionDelay: "600ms" }}
-        >
-          Explore Extracts
-        </Button>
-      </div>
       
       {/* Scroll indicator */}
       <div 
