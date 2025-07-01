@@ -104,15 +104,33 @@ const Footer = () => {
           {/* Contact Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-[#126D39]">Contact Info</h3>
-            <div className="space-y-3">
-              <div className="flex items-start space-x-2">
-                <MapPin className="w-4 h-4 text-[#126D39] mt-1 flex-shrink-0" />
-                <p className="text-[#126D39] text-sm">
-                  Vill. Chakarpur, Block Bazpur<br />
-                  Distt: Udham Singh Nagar<br />
-                  State: Uttarakhand
-                </p>
+            <div className="space-y-4">
+              {/* Head Office */}
+              <div>
+                <h4 className="font-medium text-[#126D39] mb-2">HO:</h4>
+                <div className="flex items-start space-x-2">
+                  <MapPin className="w-4 h-4 text-[#126D39] mt-1 flex-shrink-0" />
+                  <p className="text-[#126D39] text-sm">
+                    B-08, Upper Ground Floor, Tower 3,<br />
+                    NX ONE Commercial, Techzone IV,<br />
+                    Greater Noida West 201306
+                  </p>
+                </div>
               </div>
+              
+              {/* Works */}
+              <div>
+                <h4 className="font-medium text-[#126D39] mb-2">Works:</h4>
+                <div className="flex items-start space-x-2">
+                  <MapPin className="w-4 h-4 text-[#126D39] mt-1 flex-shrink-0" />
+                  <p className="text-[#126D39] text-sm">
+                    Vill. Chakarpur, Block Bazpur<br />
+                    Distt: Udham Singh Nagar<br />
+                    State: Uttarakhand
+                  </p>
+                </div>
+              </div>
+              
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-[#126D39]" />
                 <div>
