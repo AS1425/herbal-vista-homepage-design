@@ -38,7 +38,7 @@ const ManufacturingExcellence = () => {
           >
             <div className="relative">
               <img
-                src="/lovable-uploads/485827404703-89b55fcc595e.png"
+                src="/lovable-uploads/490f2d50-6dcd-4bdc-b74b-3d293f3e66a0.png"
                 alt="Advanced Manufacturing Facility"
                 className="w-full h-96 object-cover rounded-2xl shadow-lg"
               />
