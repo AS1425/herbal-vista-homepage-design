@@ -2,6 +2,7 @@
 import Hero from "@/components/Hero";
 import Header from "@/components/Header";
 import AboutTirupatiHerbal from "@/components/AboutTirupatiHerbal";
+import ManufacturingExcellence from "@/components/ManufacturingExcellence";
 import ProductGrid from "@/components/ProductGrid";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Certifications from "@/components/Certifications";
@@ -16,6 +17,7 @@ const Index = () => {
       <Header />
       <Hero />
       <AboutTirupatiHerbal />
+      <ManufacturingExcellence />
       <ProductGrid />
       <WhyChooseUs />
       <Certifications />
