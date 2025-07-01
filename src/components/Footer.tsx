@@ -1,4 +1,3 @@
-
 import { Mail, Phone, MapPin, Facebook, Linkedin, Instagram } from "lucide-react";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
@@ -107,11 +106,10 @@ const Footer = () => {
             <div className="space-y-4">
               {/* Head Office */}
               <div>
-                <h4 className="font-medium text-[#126D39] mb-2">HO:</h4>
                 <div className="flex items-start space-x-2">
                   <MapPin className="w-4 h-4 text-[#126D39] mt-1 flex-shrink-0" />
                   <p className="text-[#126D39] text-sm">
-                    B-08, Upper Ground Floor, Tower 3,<br />
+                    <span className="font-medium">HO:</span> B-08, Upper Ground Floor, Tower 3,<br />
                     NX ONE Commercial, Techzone IV,<br />
                     Greater Noida West 201306
                   </p>
@@ -120,11 +118,10 @@ const Footer = () => {
               
               {/* Works */}
               <div>
-                <h4 className="font-medium text-[#126D39] mb-2">Works:</h4>
                 <div className="flex items-start space-x-2">
                   <MapPin className="w-4 h-4 text-[#126D39] mt-1 flex-shrink-0" />
                   <p className="text-[#126D39] text-sm">
-                    Vill. Chakarpur, Block Bazpur<br />
+                    <span className="font-medium">Works:</span> Vill. Chakarpur, Block Bazpur<br />
                     Distt: Udham Singh Nagar<br />
                     State: Uttarakhand
                   </p>
