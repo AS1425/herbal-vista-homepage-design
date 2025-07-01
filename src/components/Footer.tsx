@@ -121,9 +121,9 @@ const Footer = () => {
                 <div className="flex items-start space-x-2">
                   <MapPin className="w-4 h-4 text-[#126D39] mt-1 flex-shrink-0" />
                   <p className="text-[#126D39] text-sm">
-                    <span className="font-medium">Works:</span> Vill. Chakarpur, Block Bazpur<br />
-                    Distt: Udham Singh Nagar<br />
-                    State: Uttarakhand
+                    <span className="font-medium">Works:</span> 01, Main Road Chakarpur Bazpur,<br />
+                    Udham Singh Nagar, Uttarakhand,<br />
+                    India - 262401
                   </p>
                 </div>
               </div>
