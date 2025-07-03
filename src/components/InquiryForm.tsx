@@ -3,8 +3,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Phone, Mail, CheckCircle, Send, Users, Zap, DollarSign } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { Mail, Phone, User, MessageSquare } from "lucide-react";
 
 const InquiryForm = () => {
   const [formData, setFormData] = useState({
@@ -13,172 +13,118 @@ const InquiryForm = () => {
     phone: "",
     message: ""
   });
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
-    // Basic validation
-    if (!formData.name || !formData.email || !formData.message) {
-      toast({
-        title: "Please fill in all required fields",
-        variant: "destructive",
-      });
-      return;
-    }
-
     // Simulate form submission
-    setIsSubmitted(true);
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
     toast({
-      title: "Message sent successfully!",
-      description: "We'll get back to you within 1-2 business days.",
+      title: "Request Sent Successfully!",
+      description: "We'll get back to you within 24 hours with sample information.",
     });
-
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: "", email: "", phone: "", message: "" });
-    }, 3000);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    
     setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
+      name: "",
+      email: "",
+      phone: "",
+      message: ""
     });
+    
+    setIsSubmitting(false);
   };
-
-  const usps = [
-    { icon: CheckCircle, text: "Free Sample Testing", description: "Try our extracts with complimentary samples." },
-    { icon: Zap, text: "Custom Formulations", description: "Products tailored to your requirements." },
-    { icon: Users, text: "Technical Support", description: "Expert guidance and documentation provided." },
-    { icon: DollarSign, text: "Competitive Pricing", description: "Get the best value for quality." }
-  ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-r from-[#B85E0E] to-[#26C164]">
+    <section id="contact" className="py-20 bg-[#E8F5E9]">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Request Samples or a Custom Quote
-          </h2>
-          <p className="text-lg text-[#FFF8EC] max-w-2xl mx-auto">
-            Ready to experience the Tirupati Herbal difference? Reach out for samples, 
-            custom formulations, or any inquiries – our team is here to help.
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Left Column - Contact Details & USPs */}
-          <div className="space-y-8">
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-lg">
-              <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
-              
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-[#FFF8EC]" />
-                  <div>
-                    <p className="text-white font-medium">+91 74550 58849</p>
-                    <p className="text-[#FFF8EC]">+91 87554 24007</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 text-[#FFF8EC]" />
-                  <div>
-                    <p className="text-white">info@tirupatiherbal.com</p>
-                    <p className="text-[#FFF8EC]">kunal.goel@tirupatiherbal.com</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="space-y-4">
-                {usps.map((usp, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <usp.icon className="w-5 h-5 text-[#FFF8EC] mt-1 flex-shrink-0" />
-                    <div>
-                      <p className="text-white font-medium">{usp.text}</p>
-                      <p className="text-[#FFF8EC] text-sm">{usp.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#126D39] mb-4">
+              Request Samples
+            </h2>
+            <p className="text-xl text-gray-700 leading-relaxed">
+              Experience the quality of our botanical extracts firsthand. 
+              Request samples and discover why industry leaders trust Tirupati Herbal.
+            </p>
           </div>
           
-          {/* Right Column - Inquiry Form */}
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-lg">
-            {!isSubmitted ? (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
+          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="relative">
+                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#126D39] w-5 h-5" />
                   <Input
                     type="text"
                     name="name"
-                    placeholder="Your Name *"
+                    placeholder="Your Full Name"
                     value={formData.name}
-                    onChange={handleChange}
-                    className="bg-white bg-opacity-20 border-white border-opacity-30 text-white placeholder-gray-200 focus:border-[#FFF8EC]"
+                    onChange={handleInputChange}
+                    className="pl-12 h-12 border-gray-300 focus:border-[#126D39] focus:ring-[#126D39]"
                     required
                   />
                 </div>
                 
-                <div>
+                <div className="relative">
+                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#126D39] w-5 h-5" />
                   <Input
                     type="email"
                     name="email"
-                    placeholder="Your Email *"
+                    placeholder="Your Email Address"
                     value={formData.email}
-                    onChange={handleChange}
-                    className="bg-white bg-opacity-20 border-white border-opacity-30 text-white placeholder-gray-200 focus:border-[#FFF8EC]"
+                    onChange={handleInputChange}
+                    className="pl-12 h-12 border-gray-300 focus:border-[#126D39] focus:ring-[#126D39]"
                     required
                   />
                 </div>
-                
-                <div>
-                  <Input
-                    type="tel"
-                    name="phone"
-                    placeholder="Your Phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="bg-white bg-opacity-20 border-white border-opacity-30 text-white placeholder-gray-200 focus:border-[#FFF8EC]"
-                  />
-                </div>
-                
-                <div>
-                  <Textarea
-                    name="message"
-                    placeholder="Your Message *"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={5}
-                    className="bg-white bg-opacity-20 border-white border-opacity-30 text-white placeholder-gray-200 focus:border-[#FFF8EC] resize-none"
-                    required
-                  />
-                </div>
-                
-                <Button 
-                  type="submit"
-                  className="w-full bg-[#26C164] text-white hover:bg-[#1F9B57] py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg"
-                >
-                  <Send className="w-5 h-5 mr-2" />
-                  Submit Inquiry
-                </Button>
-                
-                <p className="text-[#FFF8EC] text-sm text-center">
-                  We'll get back to you within 1-2 business days.
-                </p>
-              </form>
-            ) : (
-              <div className="text-center py-12">
-                <CheckCircle className="w-16 h-16 text-white mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
-                <p className="text-[#FFF8EC]">
-                  Thank you for your inquiry. We'll be in touch soon.
-                </p>
               </div>
-            )}
+              
+              <div className="relative">
+                <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#126D39] w-5 h-5" />
+                <Input
+                  type="tel"
+                  name="phone"
+                  placeholder="Your Phone Number"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  className="pl-12 h-12 border-gray-300 focus:border-[#126D39] focus:ring-[#126D39]"
+                  required
+                />
+              </div>
+              
+              <div className="relative">
+                <MessageSquare className="absolute left-3 top-4 text-[#126D39] w-5 h-5" />
+                <Textarea
+                  name="message"
+                  placeholder="Tell us about your specific extract requirements, quantities needed, and any other details..."
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  className="pl-12 min-h-32 border-gray-300 focus:border-[#126D39] focus:ring-[#126D39] resize-none"
+                  required
+                />
+              </div>
+              
+              <div className="text-center">
+                <Button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="bg-[#B85E0E] hover:bg-[#A0520C] text-white px-12 py-4 text-lg rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? "Sending Request..." : "Request Samples Now"}
+                </Button>
+              </div>
+            </form>
           </div>
         </div>
       </div>

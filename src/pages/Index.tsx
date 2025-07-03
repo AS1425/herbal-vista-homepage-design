@@ -1,6 +1,7 @@
 
 import Hero from "@/components/Hero";
 import Header from "@/components/Header";
+import TopInfoBar from "@/components/TopInfoBar";
 import AboutTirupatiHerbal from "@/components/AboutTirupatiHerbal";
 import ManufacturingExcellence from "@/components/ManufacturingExcellence";
 import ProductGrid from "@/components/ProductGrid";
@@ -14,6 +15,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
+      <TopInfoBar />
       <Header />
       <Hero />
       <AboutTirupatiHerbal />
