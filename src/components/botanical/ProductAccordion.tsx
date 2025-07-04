@@ -69,7 +69,7 @@ const ProductAccordion = () => {
       standardization: "Up to 20% Corosolic Acid",
       testingMethod: "HPLC",
       description: "Natural metabolic support extract for healthy blood sugar management.",
-      image: "/lovable-uploads/1fe63eb7-10e6-4dd2-b6ba-11e10b85a4e7.png"
+      image: "/lovable-uploads/9b8d5a9a-89a7-44f2-9cfe-c4899ddeb40c.png"
     },
     {
       name: "Boswellia Extract",
