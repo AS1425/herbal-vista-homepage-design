@@ -26,7 +26,7 @@ interface ProductModalProps {
 const ProductModal = ({ isOpen, onClose, product }: ProductModalProps) => {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-[#FFF8EC] border-none p-0">
+      <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto bg-[#FFF8EC] border-none p-0">
         <DialogHeader className="relative p-6 pb-0">
           <button
             onClick={onClose}
@@ -45,12 +45,11 @@ const ProductModal = ({ isOpen, onClose, product }: ProductModalProps) => {
         <div className="p-6 pt-4">
           {/* Large Product Image */}
           <div className="flex justify-center mb-8">
-            <div className="w-full max-w-2xl">
+            <div className="w-full max-w-3xl">
               <img 
                 src={product.image} 
                 alt={product.name}
-                className="w-full h-96 object-cover rounded-xl shadow-lg border-2 border-gray-200 hover:shadow-xl transition-shadow cursor-pointer"
-                onClick={() => window.open(product.image, '_blank')}
+                className="w-full h-[500px] object-cover rounded-xl shadow-lg border-2 border-gray-200 hover:shadow-xl transition-shadow"
               />
             </div>
           </div>

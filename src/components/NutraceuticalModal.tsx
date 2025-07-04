@@ -23,7 +23,7 @@ interface NutraceuticalModalProps {
 const NutraceuticalModal = ({ isOpen, onClose, product }: NutraceuticalModalProps) => {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-[#FFF8EC] border-none p-0">
+      <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto bg-[#FFF8EC] border-none p-0">
         <DialogHeader className="relative p-6 pb-0">
           <button
             onClick={onClose}
@@ -39,8 +39,8 @@ const NutraceuticalModal = ({ isOpen, onClose, product }: NutraceuticalModalProp
         <div className="p-6 pt-4">
           {/* Large Product Placeholder */}
           <div className="flex justify-center mb-8">
-            <div className="w-full max-w-2xl h-96 rounded-xl shadow-lg border-2 border-gray-200 bg-gradient-to-br from-[#26C164] to-[#126D39] flex items-center justify-center hover:shadow-xl transition-shadow">
-              <span className="text-white text-8xl font-bold drop-shadow-lg">
+            <div className="w-full max-w-3xl h-[500px] rounded-xl shadow-lg border-2 border-gray-200 bg-gradient-to-br from-[#26C164] to-[#126D39] flex items-center justify-center hover:shadow-xl transition-shadow">
+              <span className="text-white text-9xl font-bold drop-shadow-lg">
                 {product.name.charAt(0)}
               </span>
             </div>
