@@ -104,7 +104,7 @@ const ManufacturingExcellence = () => {
               <div className="flex items-start space-x-4">
                 <Award className="w-6 h-6 text-[#126D39] mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-lg font-semibold text-gray-800">Certifications: ISO 9001:2015, HACCP, Halal, Kosher</p>
+                  <p className="text-lg font-semibold text-gray-800">Certifications: ISO 9001:2015, HACCP, Halal, Kosher, WHO-GMP</p>
                 </div>
               </div>
 

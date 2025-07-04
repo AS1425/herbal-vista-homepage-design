@@ -41,7 +41,7 @@ const Certifications = () => {
     },
     {
       name: "WHO-GMP",
-      logo: "/lovable-uploads/376e8f62-bafe-483d-a9ef-c132dfd0b755.png"
+      logo: "/lovable-uploads/fe0fa698-5c68-477d-a337-81729e9838f8.png"
     },
     {
       name: "FSSAI",
