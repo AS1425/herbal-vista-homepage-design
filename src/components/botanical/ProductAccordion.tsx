@@ -309,7 +309,7 @@ const ProductAccordion = () => {
         {/* Overlay for readability */}
         <div className="absolute inset-0 bg-white/85"></div>
         
-        <div className="container mx-auto px-4 max-w-4xl relative z-10">
+        <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-[#126D39] mb-4">
               Our Botanical Extract Portfolio
@@ -319,62 +319,63 @@ const ProductAccordion = () => {
             </p>
           </div>
 
-          <Accordion type="single" collapsible className="space-y-4">
+          <div className="space-y-10">
             {products.map((product, index) => (
-              <AccordionItem 
-                key={index} 
-                value={`item-${index}`}
-                className="bg-white/95 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow backdrop-blur-sm"
+              <div 
+                key={index}
+                className="bg-white/95 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow backdrop-blur-sm p-6"
               >
-                <AccordionTrigger className="hover:no-underline px-6 py-4">
-                  <div className="flex items-center space-x-4 text-left w-full">
-                    <div 
-                      className="w-16 h-16 bg-[#26C164]/10 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden cursor-pointer hover:scale-105 transition-transform"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        handleProductClick(product);
-                      }}
-                    >
+                <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+                  {/* Product Image - 40% width on desktop */}
+                  <div className="lg:w-2/5 flex justify-center lg:justify-start">
+                    <div className="w-full max-w-[350px] lg:max-w-none">
                       <img 
                         src={product.image} 
                         alt={product.name}
-                        className="w-12 h-12 object-cover rounded-full"
+                        className="w-full h-64 lg:h-80 object-cover rounded-lg shadow-md"
                       />
                     </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-semibold text-[#126D39] mb-1">
+                  </div>
+                  
+                  {/* Product Information - 60% width on desktop */}
+                  <div className="lg:w-3/5 flex flex-col justify-center space-y-4">
+                    <div>
+                      <h3 
+                        className="text-xl lg:text-2xl font-bold text-[#126D39] mb-2 cursor-pointer hover:text-[#26C164] transition-colors"
+                        onClick={() => handleProductClick(product)}
+                      >
                         {product.name}
                       </h3>
-                      <p className="text-sm text-gray-500 italic mb-1">
+                      <p className="text-base text-gray-500 italic mb-3">
                         {product.botanicalName}
                       </p>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-base text-gray-600 mb-4 leading-relaxed">
                         {product.description}
                       </p>
                     </div>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-6">
-                  <div className="grid md:grid-cols-2 gap-4 pt-4">
-                    <div className="space-y-3">
-                      <div>
-                        <span className="font-medium text-[#126D39]">Part Used:</span>
-                        <p className="text-gray-700">{product.partUsed}</p>
+                    
+                    {/* Product Attributes Table */}
+                    <div className="border border-gray-200 rounded-lg overflow-hidden">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-gray-200">
+                        <div className="p-4 bg-gray-50/50">
+                          <span className="block font-semibold text-[#126D39] text-sm mb-1">Part Used:</span>
+                          <p className="text-gray-700 text-sm">{product.partUsed}</p>
+                        </div>
+                        <div className="p-4">
+                          <span className="block font-semibold text-[#126D39] text-sm mb-1">Testing Method:</span>
+                          <p className="text-gray-700 text-sm">{product.testingMethod}</p>
+                        </div>
                       </div>
-                      <div>
-                        <span className="font-medium text-[#126D39]">Testing Method:</span>
-                        <p className="text-gray-700">{product.testingMethod}</p>
+                      <div className="p-4 border-t border-gray-200 bg-gray-50/30">
+                        <span className="block font-semibold text-[#126D39] text-sm mb-1">Standardized For:</span>
+                        <p className="text-gray-700 text-sm">{product.standardization}</p>
                       </div>
                     </div>
-                    <div>
-                      <span className="font-medium text-[#126D39]">Standardized For:</span>
-                      <p className="text-gray-700">{product.standardization}</p>
-                    </div>
                   </div>
-                </AccordionContent>
-              </AccordionItem>
+                </div>
+              </div>
             ))}
-          </Accordion>
+          </div>
         </div>
       </section>
 
