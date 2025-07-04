@@ -1,13 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Leaf } from "lucide-react";
+import ProductModal from "@/components/ProductModal";
 
 const ProductAccordion = () => {
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleProductClick = (product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedProduct(null);
+  };
+
   const products = [
     {
       name: "Akarkara Extract",
@@ -282,81 +295,98 @@ const ProductAccordion = () => {
   ];
 
   return (
-    <section 
-      id="products-accordion" 
-      className="py-20 relative"
-      style={{
-        backgroundImage: `url('/lovable-uploads/9167e5a2-8203-4095-8c42-f211fb1bea4f.png')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
-    >
-      {/* Overlay for readability */}
-      <div className="absolute inset-0 bg-white/85"></div>
-      
-      <div className="container mx-auto px-4 max-w-4xl relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-[#126D39] mb-4">
-            Our Botanical Extract Portfolio
-          </h2>
-          <p className="text-lg text-gray-700">
-            Standardized herbal ingredients with verified potency and purity
-          </p>
-        </div>
+    <>
+      <section 
+        id="products-accordion" 
+        className="py-20 relative"
+        style={{
+          backgroundImage: `url('/lovable-uploads/9167e5a2-8203-4095-8c42-f211fb1bea4f.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Overlay for readability */}
+        <div className="absolute inset-0 bg-white/85"></div>
+        
+        <div className="container mx-auto px-4 max-w-4xl relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-[#126D39] mb-4">
+              Our Botanical Extract Portfolio
+            </h2>
+            <p className="text-lg text-gray-700">
+              Standardized herbal ingredients with verified potency and purity
+            </p>
+          </div>
 
-        <Accordion type="single" collapsible className="space-y-4">
-          {products.map((product, index) => (
-            <AccordionItem 
-              key={index} 
-              value={`item-${index}`}
-              className="bg-white/95 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow backdrop-blur-sm"
-            >
-              <AccordionTrigger className="hover:no-underline px-6 py-4">
-                <div className="flex items-center space-x-4 text-left w-full">
-                  <div className="w-16 h-16 bg-[#26C164]/10 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
-                    <img 
-                      src={product.image} 
-                      alt={product.name}
-                      className="w-12 h-12 object-cover rounded-full"
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-[#126D39] mb-1">
-                      {product.name}
-                    </h3>
-                    <p className="text-sm text-gray-500 italic mb-1">
-                      {product.botanicalName}
-                    </p>
-                    <p className="text-sm text-gray-600">
-                      {product.description}
-                    </p>
-                  </div>
-                </div>
-              </AccordionTrigger>
-              <AccordionContent className="px-6 pb-6">
-                <div className="grid md:grid-cols-2 gap-4 pt-4">
-                  <div className="space-y-3">
-                    <div>
-                      <span className="font-medium text-[#126D39]">Part Used:</span>
-                      <p className="text-gray-700">{product.partUsed}</p>
+          <Accordion type="single" collapsible className="space-y-4">
+            {products.map((product, index) => (
+              <AccordionItem 
+                key={index} 
+                value={`item-${index}`}
+                className="bg-white/95 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow backdrop-blur-sm"
+              >
+                <AccordionTrigger className="hover:no-underline px-6 py-4">
+                  <div className="flex items-center space-x-4 text-left w-full">
+                    <div 
+                      className="w-16 h-16 bg-[#26C164]/10 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden cursor-pointer hover:scale-105 transition-transform"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleProductClick(product);
+                      }}
+                    >
+                      <img 
+                        src={product.image} 
+                        alt={product.name}
+                        className="w-12 h-12 object-cover rounded-full"
+                      />
                     </div>
-                    <div>
-                      <span className="font-medium text-[#126D39]">Testing Method:</span>
-                      <p className="text-gray-700">{product.testingMethod}</p>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold text-[#126D39] mb-1">
+                        {product.name}
+                      </h3>
+                      <p className="text-sm text-gray-500 italic mb-1">
+                        {product.botanicalName}
+                      </p>
+                      <p className="text-sm text-gray-600">
+                        {product.description}
+                      </p>
                     </div>
                   </div>
-                  <div>
-                    <span className="font-medium text-[#126D39]">Standardized For:</span>
-                    <p className="text-gray-700">{product.standardization}</p>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-6">
+                  <div className="grid md:grid-cols-2 gap-4 pt-4">
+                    <div className="space-y-3">
+                      <div>
+                        <span className="font-medium text-[#126D39]">Part Used:</span>
+                        <p className="text-gray-700">{product.partUsed}</p>
+                      </div>
+                      <div>
+                        <span className="font-medium text-[#126D39]">Testing Method:</span>
+                        <p className="text-gray-700">{product.testingMethod}</p>
+                      </div>
+                    </div>
+                    <div>
+                      <span className="font-medium text-[#126D39]">Standardized For:</span>
+                      <p className="text-gray-700">{product.standardization}</p>
+                    </div>
                   </div>
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </div>
-    </section>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </section>
+
+      {/* Product Modal */}
+      {selectedProduct && (
+        <ProductModal
+          isOpen={isModalOpen}
+          onClose={closeModal}
+          product={selectedProduct}
+        />
+      )}
+    </>
   );
 };
 
