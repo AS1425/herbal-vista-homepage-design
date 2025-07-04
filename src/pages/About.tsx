@@ -7,10 +7,12 @@ import FinalCTA from "@/components/about/FinalCTA";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import TopInfoBar from "@/components/TopInfoBar";
 
 const About = () => {
   return (
     <div className="min-h-screen bg-white">
+      <TopInfoBar />
       <Header />
       <Hero />
       <WhoWeAre />
