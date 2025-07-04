@@ -1,20 +1,13 @@
-import React, { useState } from "react";
-import NutraceuticalModal from "@/components/NutraceuticalModal";
+
+import React from "react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const NutraceuticalsAccordion = () => {
-  const [selectedProduct, setSelectedProduct] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleProductClick = (product) => {
-    setSelectedProduct(product);
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setSelectedProduct(null);
-  };
-
   const products = [
     {
       name: "Beta Carotene Powder",
@@ -67,92 +60,76 @@ const NutraceuticalsAccordion = () => {
   ];
 
   return (
-    <>
-      <section 
-        id="nutraceuticals-accordion" 
-        className="py-20 relative"
-        style={{
-          backgroundImage: `url('/lovable-uploads/9167e5a2-8203-4095-8c42-f211fb1bea4f.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        {/* Overlay for readability */}
-        <div className="absolute inset-0 bg-white/85"></div>
-        
-        <div className="container mx-auto px-4 max-w-6xl relative z-10">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-[#126D39] mb-4">
-              Our Nutraceutical Extract Range
-            </h2>
-            <p className="text-lg text-gray-700">
-              Science-backed ingredients with verified purity and potency for optimal wellness
-            </p>
-          </div>
+    <section 
+      id="nutraceuticals-accordion" 
+      className="py-20 relative"
+      style={{
+        backgroundImage: `url('/lovable-uploads/9167e5a2-8203-4095-8c42-f211fb1bea4f.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      {/* Overlay for readability */}
+      <div className="absolute inset-0 bg-white/85"></div>
+      
+      <div className="container mx-auto px-4 max-w-6xl relative z-10">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-[#126D39] mb-4">
+            Our Nutraceutical Extract Range
+          </h2>
+          <p className="text-lg text-gray-700">
+            Science-backed ingredients with verified purity and potency for optimal wellness
+          </p>
+        </div>
 
-          <div className="space-y-10">
-            {products.map((product, index) => (
-              <div 
-                key={index}
-                className="bg-white/95 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow backdrop-blur-sm p-6"
-              >
-                <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
-                  {/* Product Placeholder - 40% width on desktop */}
-                  <div className="lg:w-2/5 flex justify-center lg:justify-start">
-                    <div className="w-full max-w-[350px] lg:max-w-none">
-                      <div className="w-full h-64 lg:h-80 bg-gradient-to-br from-[#26C164] to-[#126D39] rounded-lg shadow-md flex items-center justify-center">
-                        <span className="text-white text-6xl lg:text-8xl font-bold drop-shadow-lg">
-                          {product.name.charAt(0)}
-                        </span>
-                      </div>
+        <Accordion type="single" collapsible className="space-y-4">
+          {products.map((product, index) => (
+            <AccordionItem 
+              key={index}
+              value={`item-${index}`}
+              className="bg-white/95 rounded-lg shadow-sm border border-gray-200 backdrop-blur-sm"
+            >
+              <AccordionTrigger className="px-6 py-5 text-left hover:no-underline [&[data-state=open]]:bg-[#FFF8EC] [&[data-state=open]]:rounded-t-lg">
+                <h3 className="text-lg lg:text-xl font-bold text-[#126D39]">
+                  {product.name}
+                </h3>
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-6 pt-2 bg-[#FFF8EC]">
+                <div className="flex flex-col sm:flex-row gap-5">
+                  {/* Product Placeholder - Static, non-clickable */}
+                  <div className="sm:w-32 md:w-36 lg:w-40 flex-shrink-0">
+                    <div className="w-full h-32 sm:h-28 md:h-32 lg:h-36 bg-gradient-to-br from-[#26C164] to-[#126D39] rounded-lg shadow-sm flex items-center justify-center">
+                      <span className="text-white text-4xl md:text-5xl lg:text-6xl font-bold drop-shadow-lg">
+                        {product.name.charAt(0)}
+                      </span>
                     </div>
                   </div>
                   
-                  {/* Product Information - 60% width on desktop */}
-                  <div className="lg:w-3/5 flex flex-col justify-center space-y-4">
-                    <div>
-                      <h3 
-                        className="text-xl lg:text-2xl font-bold text-[#126D39] mb-3 cursor-pointer hover:text-[#26C164] transition-colors"
-                        onClick={() => handleProductClick(product)}
-                      >
-                        {product.name}
-                      </h3>
-                      <p className="text-base text-gray-600 mb-4 leading-relaxed">
-                        {product.description}
-                      </p>
-                    </div>
-                    
-                    {/* Product Attributes Table */}
-                    <div className="border border-gray-200 rounded-lg overflow-hidden">
-                      <div className="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-gray-200">
-                        <div className="p-4 bg-gray-50/50">
-                          <span className="block font-semibold text-[#126D39] text-sm mb-1">Standardized For:</span>
-                          <p className="text-gray-700 text-sm">{product.standardization}</p>
-                        </div>
-                        <div className="p-4">
-                          <span className="block font-semibold text-[#126D39] text-sm mb-1">Testing Method:</span>
-                          <p className="text-gray-700 text-sm">{product.testingMethod}</p>
-                        </div>
+                  {/* Product Details */}
+                  <div className="flex-1 space-y-3">
+                    <div className="space-y-2 text-sm">
+                      <div>
+                        <span className="font-semibold text-[#126D39]">Standardized For: </span>
+                        <span className="text-gray-700">{product.standardization}</span>
+                      </div>
+                      <div>
+                        <span className="font-semibold text-[#126D39]">Testing Method: </span>
+                        <span className="text-gray-700">{product.testingMethod}</span>
                       </div>
                     </div>
+                    
+                    <p className="text-sm text-gray-600 leading-relaxed pt-2">
+                      {product.description}
+                    </p>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Product Modal */}
-      {selectedProduct && (
-        <NutraceuticalModal
-          isOpen={isModalOpen}
-          onClose={closeModal}
-          product={selectedProduct}
-        />
-      )}
-    </>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </div>
+    </section>
   );
 };
 
