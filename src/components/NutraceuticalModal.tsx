@@ -21,59 +21,59 @@ interface NutraceuticalModalProps {
 }
 
 const NutraceuticalModal = ({ isOpen, onClose, product }: NutraceuticalModalProps) => {
-  // Generate a placeholder image based on product name
-  const getProductImage = (name: string) => {
-    // Use first letter for a consistent placeholder
-    return `https://via.placeholder.com/400x300/26C164/ffffff?text=${encodeURIComponent(name.charAt(0))}`;
-  };
-
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto bg-[#FFF8EC] border-none">
-        <DialogHeader className="relative">
+      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-[#FFF8EC] border-none p-0">
+        <DialogHeader className="relative p-6 pb-0">
           <button
             onClick={onClose}
-            className="absolute right-0 top-0 p-2 hover:bg-gray-100 rounded-full transition-colors"
+            className="absolute right-6 top-6 p-2 hover:bg-gray-100 rounded-full transition-colors z-10"
           >
-            <X className="w-5 h-5 text-gray-500" />
+            <X className="w-6 h-6 text-gray-500" />
           </button>
-          <DialogTitle className="text-2xl font-bold text-[#126D39] mb-4 pr-8">
+          <DialogTitle className="text-3xl font-bold text-[#126D39] mb-4 pr-12">
             {product.name}
           </DialogTitle>
         </DialogHeader>
         
-        <div className="space-y-6">
-          {/* Product Image */}
-          <div className="flex justify-center">
-            <div className="w-full max-w-md h-64 rounded-lg shadow-md border border-gray-200 bg-gradient-to-br from-[#26C164] to-[#126D39] flex items-center justify-center">
-              <span className="text-white text-6xl font-bold">
+        <div className="p-6 pt-4">
+          {/* Large Product Placeholder */}
+          <div className="flex justify-center mb-8">
+            <div className="w-full max-w-2xl h-96 rounded-xl shadow-lg border-2 border-gray-200 bg-gradient-to-br from-[#26C164] to-[#126D39] flex items-center justify-center hover:shadow-xl transition-shadow">
+              <span className="text-white text-8xl font-bold drop-shadow-lg">
                 {product.name.charAt(0)}
               </span>
             </div>
           </div>
           
-          {/* Product Details */}
-          <div className="space-y-4">
-            <div>
-              <span className="font-semibold text-[#126D39]">Standardized For:</span>
-              <p className="text-gray-700">{product.standardization}</p>
+          {/* Product Details Grid */}
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              <div className="bg-white/70 p-4 rounded-lg border border-gray-200">
+                <span className="font-semibold text-[#126D39] text-lg block mb-2">Standardized For:</span>
+                <p className="text-gray-700 text-base">{product.standardization}</p>
+              </div>
             </div>
             
-            <div>
-              <span className="font-semibold text-[#126D39]">Testing Method:</span>
-              <p className="text-gray-700">{product.testingMethod}</p>
+            <div className="space-y-6">
+              <div className="bg-white/70 p-4 rounded-lg border border-gray-200">
+                <span className="font-semibold text-[#126D39] text-lg block mb-2">Testing Method:</span>
+                <p className="text-gray-700 text-base">{product.testingMethod}</p>
+              </div>
             </div>
-            
-            <div>
-              <span className="font-semibold text-[#126D39]">Description:</span>
-              <p className="text-gray-700 leading-relaxed">{product.description}</p>
+          </div>
+          
+          <div className="mt-6">
+            <div className="bg-white/70 p-4 rounded-lg border border-gray-200">
+              <span className="font-semibold text-[#126D39] text-lg block mb-2">Description:</span>
+              <p className="text-gray-700 text-base leading-relaxed">{product.description}</p>
             </div>
           </div>
           
           {/* CTA Button */}
-          <div className="flex justify-center pt-4">
+          <div className="flex justify-center pt-8">
             <Button 
-              className="bg-[#B85E0E] hover:bg-[#A0520C] text-white px-8 py-3 rounded-lg shadow-md transition-all duration-300"
+              className="bg-[#B85E0E] hover:bg-[#A0520C] text-white px-12 py-4 text-lg rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
               onClick={() => {
                 window.location.href = '/contact';
               }}

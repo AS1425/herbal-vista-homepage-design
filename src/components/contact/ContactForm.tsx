@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -201,8 +200,7 @@ const ContactForm = () => {
                     <h4 className="font-semibold text-[#126D39] mb-1">Email Addresses</h4>
                     <p className="text-gray-600">
                       tirupatiherbal07@gmail.com<br />
-                      info@tirupatiherbal.com<br />
-                      sales@tirupatiherbal.com
+                      info@tirupatiherbal.com
                     </p>
                   </div>
                 </div>
