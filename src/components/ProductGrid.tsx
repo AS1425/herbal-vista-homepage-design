@@ -28,22 +28,32 @@ const ProductGrid = () => {
     {
       name: "Amla Extract",
       description: "Promotes immunity and skin health",
-      image: "/lovable-uploads/29afdef2-019e-4a7c-9d4b-c33f4fb28efc.png"
+      image: "/lovable-uploads/6b9ddeb1-5f42-48b8-a6ba-23eb3422d5c8.png"
     },
     {
       name: "Aloe Vera Extract",
       description: "Soothes and hydrates skin",
-      image: "/lovable-uploads/036983db-6cf0-48c1-9e8a-24fd64f6a037.png"
+      image: "/lovable-uploads/24608fb0-76a1-4874-a642-5da7b24cca15.png"
     },
     {
       name: "Akarkara Extract",
       description: "Supports vitality and cognition",
-      image: "/lovable-uploads/b75c7ca3-f8fd-423d-abab-58fcafaf46af.png"
+      image: "/lovable-uploads/0b09a8cd-2f91-44e1-9da5-28f363dc7c93.png"
     },
     {
       name: "Ashwagandha Extract",
       description: "Reduces stress, boosts energy",
-      image: "/lovable-uploads/5adb452a-1ad6-41e8-bf82-a7c69800fcc1.png"
+      image: "/lovable-uploads/0b09a8cd-2f91-44e1-9da5-28f363dc7c93.png"
+    },
+    {
+      name: "Bacopa Extract",
+      description: "Cognitive support botanical extract enhancing memory and mental clarity",
+      image: "/lovable-uploads/e0e6fc48-00cb-47fa-9545-b2dccce9c6ab.png"
+    },
+    {
+      name: "Cranberry Extract",
+      description: "Urinary tract health support with powerful antioxidant compounds",
+      image: "/lovable-uploads/7f992822-3a78-4432-abb5-043be53a6094.png"
     }
   ];
 
