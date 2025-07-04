@@ -1,3 +1,4 @@
+
 import { Mail, Phone, MapPin, Facebook, Linkedin, Instagram } from "lucide-react";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
@@ -140,21 +141,13 @@ const Footer = () => {
                 <div>
                   <a 
                     href="mailto:info@tirupatiherbal.com"
-                    className="text-[#126D39] text-sm hover:text-[#26C164] transition-colors"
+                    className="text-[#126D39] text-sm hover:text-[#26C164] transition-colors block"
                   >
                     info@tirupatiherbal.com
                   </a>
-                  <br />
-                  <a 
-                    href="mailto:kunal.goel@tirupatiherbal.com"
-                    className="text-[#126D39] text-sm hover:text-[#26C164] transition-colors"
-                  >
-                    kunal.goel@tirupatiherbal.com
-                  </a>
-                  <br />
                   <a 
                     href="mailto:tirupatiherbal07@gmail.com"
-                    className="text-[#126D39] text-sm hover:text-[#26C164] transition-colors"
+                    className="text-[#126D39] text-sm hover:text-[#26C164] transition-colors block"
                   >
                     tirupatiherbal07@gmail.com
                   </a>

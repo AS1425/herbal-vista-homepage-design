@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -66,7 +67,7 @@ const Header = () => {
 
   return (
     <header 
-      className={`fixed top-12 left-0 right-0 z-40 transition-all duration-300 ${
+      className={`fixed top-8 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled 
           ? "bg-[#F8F9F4] shadow-lg h-16" 
           : "bg-[#F8F9F4] h-20"

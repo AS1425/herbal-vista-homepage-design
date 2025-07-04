@@ -40,12 +40,12 @@ const Certifications = () => {
       logo: "/lovable-uploads/1cfd7f1f-b6af-41d2-8914-d02fcb1db100.png"
     },
     {
-      name: "WHO-GMP Certified",
-      logo: "/lovable-uploads/c49a6aaf-ac2a-4762-be19-67b570030e9b.png"
+      name: "WHO-GMP",
+      logo: "/lovable-uploads/376e8f62-bafe-483d-a9ef-c132dfd0b755.png"
     },
     {
-      name: "FSSAI Licensed",
-      logo: "/lovable-uploads/e2b8a2cb-92d2-49e2-9e4b-63576e10ea61.png"
+      name: "FSSAI",
+      logo: "/lovable-uploads/d00a5f04-d9a4-41b3-ab40-af4e732e76dc.png"
     }
   ];
 
