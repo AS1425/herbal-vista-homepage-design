@@ -1,4 +1,3 @@
-
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef, useState } from "react";
@@ -38,7 +37,7 @@ const ProductGrid = () => {
     {
       name: "Akarkara Extract",
       description: "Supports vitality and cognition",
-      image: "/lovable-uploads/0b09a8cd-2f91-44e1-9da5-28f363dc7c93.png"
+      image: "/lovable-uploads/2081432d-157f-49f5-b0b8-a7232e2723d6.png"
     },
     {
       name: "Ashwagandha Extract",
